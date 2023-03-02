@@ -1,0 +1,201 @@
+/* solution by kavindu manahara @group 7 */
+
+.theme-light {
+    --color-secondary: white; /*for footer background*/
+    --color-accent: #fd6f53;
+    --font-color-a: #2554c2;
+    --font-color:black;
+    --hover-color:#38cc87;
+}
+
+.theme-dark {
+    --color-secondary: #11283a; /*for footer background*/
+    --color-accent: #12cdea;
+    --font-color-a: #ffffff;
+    --font-color:white;
+    --hover-color:#25b620;
+}
+
+/* body tag style */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar{
+    display: none;
+}
+
+.shortcut{grid-area: shortcut;}
+.contact{grid-area: contact;}
+.find-us{grid-area: find-us;}
+.terms{grid-area: terms;}
+.location{grid-area: location;}
+
+/* footer class style */
+.footer{
+    display: grid;
+    background-color: var(--color-secondary);
+    height: auto;
+}
+
+/* inner div width limitation */
+.footer div div{
+    width:fit-content;
+}
+
+/* images style */
+.shortcut img , .contact img , .find-us img , .terms img{
+    width: 15px;
+    height: 15px;
+}
+
+/* text styles */
+.shortcut div, .find-us div , .contact div , .terms div{
+    font-family:'Nunito', sans-serif;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+/* hovers */
+.shortcut div:hover, .find-us div:hover , .terms div:not(:nth-last-child(6)):hover{
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+/* add padding to content */
+.footer div div{
+    padding-top: 5px;
+}
+
+/* headings style */
+.heading{
+    padding-top: 30px;
+    margin: 0 0 5px;
+    width: fit-content;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: var(--font-color-a);
+    padding-bottom: 2px;
+    border-bottom: 2px solid #fa921b;
+}
+
+/* copyright style */
+.copyright{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px 0 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #2554c2;
+}
+
+/* footer copyright symbol style */
+#navbar-footer p span{
+    font-size: 13px;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* media quaries for change website layout */
+@media(max-width:768px){
+
+    .footer{
+        grid-template-areas: 
+                            'shortcut shortcut '
+                            'contact contact' 
+                            'find-us find-us'
+                            'terms terms'
+                            'location location';
+        padding: 0 auto 20px;
+        text-align: center;
+    }
+
+    .footer  div div{
+       margin: auto;
+    }
+
+    .heading{
+        font-size: 15px;
+        margin: 0 auto 10px;
+    }
+
+    .shortcut div, .find-us div , .contact div , .terms div{
+        font-size:10px;
+    }
+
+    .shortcut img , .contact img , .find-us img , .terms img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .terms{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    .location iframe{
+        width:240px;
+        height:160px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(min-width:768px){
+
+    .footer{
+        grid-template-areas: 
+                            'shortcut shortcut contact contact find-us find-us'
+                            'terms terms terms location location location';
+        padding: 0 15% 20px;
+        width: 70%;       
+    }
+
+    .heading{
+        font-size: 15px;
+    }
+
+    .shortcut div, .find-us div , .contact div , .terms div{
+        font-size: 10px;
+    }
+
+    .terms{
+        width: 250px;
+    }
+
+    .location iframe{
+        width:240px;
+        height:160px;
+    }
+
+}
+
+@media(min-width:992px){
+    .footer{
+        grid-template-areas: 
+                            'shortcut shortcut contact contact find-us find-us'
+                            'terms terms terms location location location';
+        padding: 0 25% 20px;
+        width: 50%;
+    }
+
+    .heading{
+        font-size: 18px;
+    }
+
+    .shortcut div, .find-us div , .contact div , .terms div{
+        font-size: 12px;
+    }
+
+    .terms{
+        width: 300px;
+    }
+
+    .location iframe{
+        width:300px;
+        height:200px;
+    }
+
+}

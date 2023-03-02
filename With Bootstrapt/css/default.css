@@ -1,0 +1,724 @@
+/* solution by Kavindu Manahara @group 7 */
+
+
+*{
+    box-sizing: border-box;
+}
+
+/* light theme */
+.theme-light{
+    --background-color:#dfdfdf;
+    --header-color:#11283a;
+    --navigation-small:#ffffff;
+    --font-color:#000000;
+    --button-color:#089755;
+    /* --navigation-color:#050242; */
+    --hover-color:#38cc87;
+    --text-hover-color:#dbdbdb;
+    --theme-btn-color:#11283a;
+    --shadow-color:#53515168;
+    --benift-color:#fff;
+    --work-from-background-color:rgb(120, 104, 230);
+    --footer-color:#fff;
+    --feedback-area-color:#a64dff;
+}
+
+/* 
+z-index list 
+
+0 - default and more dropdown before the button clicking
+1 - main container
+2 - navbar for small device
+3 - navbar
+4 - more dropdown
+5 - chat button
+6 - back to top
+
+*/
+
+/* dark theme */
+.theme-dark{
+    --background-color:#2C394B;
+    --header-color:#11283a;
+    --navigation-small:#334756;
+    --font-color:#ffffff;
+    /* --navigation-color:#050242; */
+    --button-color:#089755;
+    --hover-color:#38cc87;
+    --text-hover-color:#515f69;
+    --theme-btn-color:#fff;
+    --shadow-color:#27262678;
+    --benift-color:#11283a;
+    --work-from-background-color:#0b5269;
+    --footer-color:#11283a;
+    --feedback-area-color:#142850;
+}
+
+.red{
+    color: red;
+}
+
+
+/* body style */
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+}
+
+.spans{
+    color: #38cc87;
+    font-weight: 600;
+}
+
+.font-container{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#serach_keyword{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+}
+
+#form-line-1 button{
+    border: none;
+    background-color: #0b5269;
+    border-radius: 5px;
+}
+
+/* option group */
+#form-line-2 optgroup{
+    color: #ffffff;
+    background-color: #0b5269;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+/* dropdown select */
+#form-line-2 select{
+    border-radius: 3px;
+    padding: 0 10px 0;
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* dropdown option */
+#form-line-2 option{
+    color: #ffffff;
+    background-color: #0a1d5c;
+    padding: 0 10px 0;
+}
+
+#review{
+    background-color: var(--feedback-area-color);
+    box-shadow: 0 0 150px 150px var(--feedback-area-color);
+
+}
+
+#sign-in{
+    background-color: var(--work-from-background-color);
+    box-shadow: 0 0 200px 200px var(--work-from-background-color);
+}
+
+.header-color{
+    background-color: #11283a;
+    border: none;
+}
+
+.dropdown-color:hover{
+    background-color: #2C394B;
+}
+
+.active-pg{
+    color: #0cbb69;
+    font-weight: 600;
+}
+
+#theme{
+    border-top-right-radius: 45%; 
+    border-bottom-right-radius: 45%; 
+    z-index: 999;
+    background-color: var(--theme-btn-color);
+    cursor: pointer;
+}
+
+#theme i {
+    transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform:scale(0.7) ;
+    -webkit-transform:scale(0.7);
+    color: var(--background-color);
+}
+
+.buttons{
+    border-radius: 5px;
+    background-color: #d67322;
+    color: #ffffff;
+    width: 100px;
+    text-align: center;
+    border: none;
+}
+
+#menu-btn{
+    background-color: #11283a;
+    border: none;
+}
+
+#menu-btn:focus , #menu-btn:active{
+    border: none;
+}
+
+.buttons:hover{
+    background-color: #38cc87;
+}
+
+.buttons:active{
+    transform: scale(0.8);
+}
+
+.benifit-container{
+    border-radius: 20px;
+    background-color: var(--benift-color);
+    color: var(--font-color);
+    box-shadow: -2px 2px 5px var(--shadow-color);
+}
+
+/* trending fire */
+#trending > p  img{
+    width:20px;
+    height: 20px;
+    padding-bottom: 5px;
+}
+
+#main-container{
+    height: 100%;
+    min-height: 600px;
+    max-height: 1000px;
+    width:100%;
+    margin: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    background-image: radial-gradient( #0a1d5c , #020122);
+    background-image: -moz-radial-gradient(#0a1d5c , #020122); /* for firefox*/
+    background-image: -webkit-radial-gradient(#0a1d5c , #020122); /* for mac*/
+}
+
+#img-main-container{
+    transition: 0.5s;
+    -webkit-transition: 0.5s; 
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+/* careers block */
+#careers{
+    margin: 0 5%;
+}
+
+.img-shadow{
+    box-shadow: -2px 2px 5px var(--shadow-color);
+}
+
+.img-card{
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--background-color);
+    transition: 0.5s;
+    -webkit-transition: 0.5s; 
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    cursor: pointer;
+    background-color: #000000;
+    box-shadow: -2px 5px 5px var(--shadow-color);
+}
+
+.img-card img{
+    opacity: 0.7;
+}
+
+.font-career{
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Kanit' , sans-serif;
+    text-shadow: 2px 1px #000;;
+}
+
+/* career images */
+.career-images{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 20px;
+    transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.career-images:hover{
+    transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform:scale(1.2) ;
+    -webkit-transform:scale(1.2);
+}
+
+.trending-text{
+    color: white;
+    font-family: 'kanit' , sans-serif;
+    width: 50%;
+    height: auto;
+}
+
+.trending-text span{
+    color: #38cc87;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.font-default-heading{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    color: var(--font-color);
+}
+
+.font-default-heading span{
+    font-weight: 400;
+}
+
+#content-area{
+    position: absolute;
+    top: 100%;
+}
+
+.collobarations-img{
+    background-color: white;
+    border-radius: 10px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* start chat button */
+#chat-btn{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    bottom: 60px;
+    right: -500px;
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+}
+
+#chat-btn:hover{
+    cursor: pointer;
+}
+
+#chat-btn p{
+    background-color: #adadff;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 30px 5px;
+    margin-right: -5px;
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+}
+
+#chat-btn img{
+    width: 35px;
+    height: 35px;
+}
+/* end chat button */
+
+/* back to top button start */
+#back-to-top{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 8px;
+    z-index: 6;
+    bottom: -50px;
+    font-family: 'Times New Roman', Times, serif;
+    right: 20px;
+    font-weight: 900;
+    background-color: #099b4b;
+    color: #ffffff;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    -o-transform: rotate(90deg); /*for opera*/
+    -ms-transform: rotate(90deg); /*for IE9*/
+    -moz-transform: rotate(90deg); /*for firefox*/
+    -webkit-transform: rotate(90deg); /*for safari*/
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+    cursor: pointer;
+}
+
+#footer{
+    background-color: var(--footer-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 3px 5px 5px var(--shadow-color);
+}
+
+.font-footer{
+    color: var(--font-color);
+    font-family: 'Nunito' , sans-serif;
+    font-size: 13px;
+}
+
+.add-hover:hover{
+    color: #fa921b;
+    cursor: pointer;
+}
+
+.heading{
+    margin: 0 0 5px;
+    width: fit-content;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: var(--font-color);
+    padding-bottom: 2px;
+    border-bottom: 2px solid #fa921b;
+}
+
+.copyright{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px 0 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #2554c2;
+}
+
+/* footer copyright symbol style */
+.copyright span{
+    font-size: 13px;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #089755;  
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #38cc87;
+}
+/* end of the custom scrollbar */
+
+@media (max-width:576px){
+    .font-default{
+        font-size: 0.6rem;
+    }
+
+    .font-default-heading{
+        font-size: 1.1rem;
+    }
+
+    .font-default-heading span{
+        font-size: 0.4rem;
+    }
+
+    .trending-text{
+        position: absolute;
+        margin-left: 1%;
+        background-color: #00000051;
+        width: 95%;
+        padding: 5%;
+    }
+
+    .trending-text span{
+        font-size: 0.5rem;
+    }
+
+    .trending-text p{
+        font-size: 0.5rem;
+    }
+
+    .sign-position{
+        position: absolute;
+    }
+
+    .benifit-container{
+        width: 90%;
+    }
+
+    #img-main-container{
+        width: 80%;
+    }
+
+    .spans{
+        font-size: 1.8rem;
+    }
+
+    .font-container{
+        font-size: 1rem;
+    }
+
+    .font-small{
+        font-size: 0.7rem;
+    }
+
+    #serach_keyword{
+        height: 25px;
+        width: 75%;
+        font-size: 0.8rem;
+    }
+
+    .font-career{
+        font-size: 1.3rem;
+    }
+
+}
+
+@media (min-width:576px){
+    .font-default{
+        font-size: 0.6rem;
+    }
+
+    .font-default-heading{
+        font-size: 1.2rem;
+    }
+
+    .font-default-heading span{
+        font-size: 0.5rem;
+    }
+
+    .trending-text{
+        position: absolute;
+        margin-left: 1%;
+        width: 75%;
+        background-color: #00000051;
+        padding: 5%;
+    }
+
+    .trending-text span{
+        font-size: 0.7rem;
+    }
+
+    .trending-text p{
+        font-size: 0.8rem;
+    }
+
+    .sign-position{
+        position:relative;
+    }
+
+    .benifit-container{
+        width: 80%;
+    }
+
+    #careers{
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #img-main-container{
+        width: 60%;
+        height: auto;
+    }
+
+    .spans{
+        font-size: 2rem;
+    }
+
+    .font-container{
+        font-size: 1rem;
+    }
+
+    .font-small{
+        font-size: 0.8rem;
+    }
+
+    #serach_keyword{
+        height: 30px;
+        width: 60%;
+        font-size: 0.9rem;
+    }
+
+    #form-line-1 button{
+        height: 30px;
+        width: 30px;
+    }
+
+    .font-career{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:768px){
+    .font-default{
+        font-size: 0.7rem;
+    }
+
+    .font-default-heading{
+        font-size: 1.5rem;
+    }
+
+    .font-default-heading span{
+        font-size: 0.6rem;
+    }
+
+    .trending-text span{
+        font-size: 0.8rem;
+    }
+
+    .trending-text p{
+        font-size: 0.7rem;
+    }
+
+    .benifit-container{
+        width: 70%;
+    }
+
+    #img-main-container{
+        width: 80%;
+        height: auto;
+    }
+
+    .spans{
+        font-size: 2rem;
+    }
+
+    .font-container{
+        font-size: 1rem;
+    }
+
+    .font-small{
+        font-size: 0.8rem;
+    }
+
+    .font-career{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (min-width:992px){
+    .font-default{
+        font-size: 0.8rem;
+    }
+
+    .font-default-heading{
+        font-size: 1.8rem;
+    }
+
+    .font-default-heading span{
+        font-size: 0.7rem;
+    }
+
+    .trending-text{
+        position: relative;
+        margin-left: 0;
+        background-color: transparent;
+        padding: 2%;
+        width: 50%;
+    }
+
+    .trending-text span{
+        font-size: 1rem;
+    }
+
+    .trending-text p{
+        font-size: 0.9rem;
+    }
+
+    .benifit-container{
+        width: 60%;
+    }
+
+    #img-main-container{
+        width: 90%;
+        height: auto;
+    }
+
+    .spans{
+        font-size: 2.2rem;
+    }
+
+    .font-container{
+        font-size: 1.2rem;
+    }
+
+    .font-small{
+        font-size: 0.9rem;
+    }
+
+    .font-career{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:1200px){
+    .font-default{
+        font-size: 0.9rem;
+    }
+
+    .font-default-heading{
+        font-size: 2.1rem;
+    }
+
+    .font-default-heading span{
+        font-size: 0.8rem;
+    }
+
+    .trending-text span{
+        font-size: 1.2rem;
+    }
+
+    .trending-text p{
+        font-size: 1.1rem;
+    }
+
+    .benifit-container{
+        width: 50%;
+    }
+
+    #careers{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}

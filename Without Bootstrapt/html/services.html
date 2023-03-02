@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Sewmini Rathnayaka @ group 7">
+    <meta name="revised" content="24/01/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/services-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>Services - DreamPath.lk</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav id="navbar">
+
+        <!-- logo image -->
+        <img src="../Images/DreamPath-white.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+
+        <!-- search icon and theme change icon -->
+        <img src="../Images/search.svg" alt="theme" id="search">
+        <img src="../Images/sun.svg" alt="search" id="theme">
+
+        <!-- include default theme js file -->
+        <script src="../JavaScript/default-script.js"></script>
+
+        <!-- this script use for loading with saved theme selection -->
+        <script>
+            localStorage.getItem("theme") == 'theme-dark' ? themeChange('theme-light') : themeChange('theme-dark');
+        </script>
+
+        <!-- navigation bar buttons -->
+        <button id="btn-home" onclick="location.href='../index.html'">Home</button>
+        <button id="btn-services" onclick="location.href='../html/services.html'">Services</button>
+        <button id="btn-contacts" onclick="location.href='../html/contacts.html'">Contact</button>
+        <button id="btn-about" onclick="location.href='../html/about.html'">About</button>
+        <button id="btn-more">More <span style="font-size: 12px; margin-bottom:5px">&#11206;</span></button>
+
+        <!-- sign in and sign up button -->
+        <button id="sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+
+        <!-- navigation bar menu button for small displays -->
+        <button id="btn-menu"> <img src="../Images/menu.svg" alt="menu"> </button>
+
+    </nav>
+
+    <!-- navigation dropdown for small display divices -->
+    <div id="nav-for-small-divice">
+        <div id="small-btn-home" onclick="location.href='../index.html'">Home</div>
+        <div id="small-btn-services" onclick="location.href='../html/services.html'">Services</div>
+        <div id="small-btn-contacts" onclick="location.href='../html/contacts.html'">Contact</div>
+        <div id="small-btn-about" onclick="location.href='../html/about.html'">About</div>
+        <div id="small-btn-more">More <span style="font-size: 10px;">&#11206;</span></div>
+
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/faq.html'">FAQ</div>
+
+        <button id="small-sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="small-sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+    </div>
+
+    <!-- more dropdown -->
+    <div id="more-dropdown">
+
+        <div onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div onclick="location.href='../html/faq.html'">FAQ</div>
+
+    </div>
+
+    <!-- search box -->
+    <div id="search-box">
+        <input type="text" name="search" id="search-key" placeholder="Search by skill , job title">
+        <button><i class="fa-solid fa-magnifying-glass" style="color:#38cc87;"></i></button>
+    </div>
+
+    <!-- content area start -->
+
+    <div id="dreampath-for">
+        <div id="for-worker">
+            <fieldset>
+                <legend>DreamPath.lk for Worker</legend>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-briefcase fa-2x"></i>
+                    </div>
+                    <p class="spans">High-Quality Remote & Flexible Jobs</p>
+                    <p class="font-color">We help people find professional remote and flexible jobs in 50+ career
+                        fields, entry-level to
+                        executive, part-time to full-time, in the Sri Lanka and around the world.</p>
+                </div>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-crosshairs fa-2x"></i>
+                    </div>
+                    <p class="spans">Every Job & Company Researched for You</p>
+                    <p class="font-color">Our expert team works tirelessly to find and screen the best remote and
+                        flexible jobs, and to
+                        provide information on each company to help you decide if you want to apply.</p>
+                </div>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <p class="spans">High-Quality Support & Resources</p>
+                    <p class="font-color">We offer great resources to provide you support, guidance, and tools so you
+                        can land the remote
+                        or flexible job you want, and that includes client support you can talk to.</p>
+                </div>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-face-smile fa-2x"></i>
+                    </div>
+                    <p class="spans">No-Risk Satisfaction Guarantee</p>
+                    <p class="font-color">We want our users to be happy with our service, and if for any reason you're
+                        not, simply let us
+                        know you'd like a refund within 30 days. You'll get it. It's that easy.</p>
+                </div>
+
+            </fieldset>
+
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <button class="sign-btns" style="border-radius: 5px;" onclick="location.href='signup.html'">Sign in as
+                    Worker</button>
+            </div>
+
+        </div>
+        <div id="for-employer">
+            <fieldset>
+                <legend>DreamPath.lk for Employer</legend>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-handshake fa-2x"></i>
+                    </div>
+                    <p class="spans">Recruiting & Hiring</p>
+                    <p class="font-color">Find candidates and hire more efficiently and effectively for your remote,
+                        freelance, part-time,
+                        or flexible schedule jobs—including from new, untapped candidate pools such as working mothers,
+                        millennials, freelancers, and others.</p>
+                </div>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-copyright fa-2x"></i>
+                    </div>
+                    <p class="spans">Employer Branding</p>
+                    <p class="font-color">Enhance your brand as an employer of choice and promote it to top talent as a
+                        leader in work
+                        flexibility through webinars, virtual job fairs, targeted emails, and a variety of other
+                        customizable marketing options.</p>
+                </div>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-brands fa-slideshare fa-2x"></i>
+                    </div>
+                    <p class="spans">Consulting</p>
+                    <p class="font-color">Leverage our expertise in a variety of remote and flexible work topics, such
+                        as managing remote
+                        teams, remote/flexwork audits, team training, candidate assessment and onboarding, SEO
+                        recruitment strategies, and more.</p>
+                </div>
+
+                <div class="box-bkg">
+                    <div class="icons">
+                        <i class="fa-solid fa-users fa-2x"></i>
+                    </div>
+                    <p class="spans">Thought Leadership & Relationships</p>
+                    <p class="font-color">Have DreamPath as a partner to help connect you with trend information,
+                        research, data points,
+                        thought leaders, and other organizations to help guide your strategies and support your internal
+                        initiatives.</p>
+                </div>
+            </fieldset>
+
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <button class="sign-btns" style="border-radius: 5px;"
+                    onclick="location.href='signup.html?value=employer'">Sign in as Employer</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <fieldset>
+            <legend>Services</legend>
+
+            <p class="font-default">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Dreampath.lk provides a full online
+                service
+                for anyone looking for a new job or a new course. We advertise
+                vacancies on behalf
+                of employers, recruitment agencies who are looking for employers and jobs on behalf of job
+                providers.
+                As a registered user of Dreampath.lk, you can receive email job alerts, apply for job vacancies,
+                create your
+                job seeking profile.
+                Dreampath.lk's Courses features a comprehensive course search from a range of job providers.
+                We also offer a range of career advice, news and information, all designed to help you succeed in
+                your
+                career.
+                No matter where a job is posted, it will be easy to find when you use Dreampath.lk </p>
+
+            <br><br>
+
+            <span class="spans">Honest & helpful</span> <br>
+            <p class="font-default">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;We know that all of our clients have
+                different needs,
+                which is why we'll take the
+                time to get to know you, so we
+                can find the right solutions to your challenges and needs.</p>
+
+            <span class="spans">Professional & reliable</span> <br>
+            <p class="font-default">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Recruitment and staff management can be a
+                risky
+                business. In an industry where
+                quality and compliance is a must,
+                our rigorous processes and professionalism mean you can rely on us to deliver.</p>
+
+            <span class="spans">Friendly & fun</span> <br>
+            <p class="font-default">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;We build strong relationships with all of
+                our clients,
+                that's how we like to do
+                business. You'll be sure to get
+                the human element with us!</p>
+
+            <p class="font-default">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;We offer tips to land a job and career
+                development advice on
+                our blog, a robust library of research into
+                workplace trends. Also, the annual Salary Guide from Dreampath.lk has current compensation rates for
+                hundreds of positions across the fields we service — all at no cost to job seekers.
+
+                If you're looking for career opportunities in the fields of finance and accounting, technology,
+                engineering and teaching creative, administrative and customer support or legal, you're in the right
+                place. Dreampath.lk is dedicated to specific industries and to specialized services worldwide.</p>
+
+        </fieldset>
+
+    </div>
+
+    <!-- content area end -->
+
+    <!-- footer class div -->
+    <div id="footer">
+        <iframe src="../html/footer.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- add chat icon to web page -->
+    <div id="chat-btn" onclick="location.href='contacts.html'">
+        <img src="../Images/chat.svg" alt="chat">
+    </div>
+
+    <!-- create back to top div -->
+    <div id="back-to-top">&Lt;</div>
+
+    <!-- scroll function script -->
+    <script>
+        document.querySelector("#back-to-top").addEventListener('click', function () {
+            document.body.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- add dropdown JavaScript -->
+    <script src="../JavaScript/dropdowns.js"></script>
+
+</body>
+
+</html>

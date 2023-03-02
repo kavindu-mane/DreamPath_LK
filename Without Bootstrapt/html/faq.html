@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Dinuk Samarakoon @ group 7">
+    <meta name="revised" content="16/02/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/faq-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>FAQ - DreamPath.lk</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav id="navbar">
+
+        <!-- logo image -->
+        <img src="../Images/DreamPath-white.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+
+        <!-- search icon and theme change icon -->
+        <img src="../Images/search.svg" alt="theme" id="search">
+        <img src="../Images/sun.svg" alt="search" id="theme">
+
+        <!-- include default theme js file -->
+        <script src="../JavaScript/default-script.js"></script>
+
+        <!-- this script use for loading with saved theme selection -->
+        <script>
+            localStorage.getItem("theme") == 'theme-dark' ? themeChange('theme-light') : themeChange('theme-dark');
+        </script>
+
+        <!-- navigation bar buttons -->
+        <button id="btn-home" onclick="location.href='../index.html'">Home</button>
+        <button id="btn-services" onclick="location.href='../html/services.html'">Services</button>
+        <button id="btn-contacts" onclick="location.href='../html/contacts.html'">Contact</button>
+        <button id="btn-about" onclick="location.href='../html/about.html'">About</button>
+        <button id="btn-more">More <span style="font-size: 12px; margin-bottom:5px">&#11206;</span></button>
+
+        <!-- sign in and sign up button -->
+        <button id="sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+
+        <!-- navigation bar menu button for small displays -->
+        <button id="btn-menu"> <img src="../Images/menu.svg" alt="menu"> </button>
+
+    </nav>
+
+    <!-- navigation dropdown for small display divices -->
+    <div id="nav-for-small-divice">
+        <div id="small-btn-home" onclick="location.href='../index.html'">Home</div>
+        <div id="small-btn-services" onclick="location.href='../html/services.html'">Services</div>
+        <div id="small-btn-contacts" onclick="location.href='../html/contacts.html'">Contact</div>
+        <div id="small-btn-about" onclick="location.href='../html/about.html'">About</div>
+        <div id="small-btn-more">More <span style="font-size: 10px;">&#11206;</span></div>
+
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div class="small-dropdown-itm">FAQ</div>
+
+        <button id="small-sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="small-sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+    </div>
+
+    <!-- more dropdown -->
+    <div id="more-dropdown">
+
+        <div onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div onclick="location.href='../html/faq.html'">FAQ</div>
+
+    </div>
+
+    <!-- search box -->
+    <div id="search-box">
+        <input type="text" name="search" id="search-key" placeholder="Search by skill , job title">
+        <button><i class="fa-solid fa-magnifying-glass" style="color:#38cc87;"></i></button>
+    </div>
+
+    <!-- content area start -->
+
+    <div id="container">
+
+        <p class="spans" style="text-align: center; font-size: 2rem;">FAQ</p>
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> Can I apply for several jobs at the same time?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Of course. If there is more than one job on offer
+                that you feel corresponds to your profile and career
+                goals,
+                you may apply for two or more jobs simultaneously.</p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> How long should I make my cover letter and/or
+                resume?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Your cover letter should be no more than one page
+                in length.
+                It should explain who you are and why you're the best candidate for the job. It needs to be very
+                concise,
+                yet keep the hiring manager wanting to learn more. If you go any longer than a page, the person reading
+                it will get bored.
+                Your resume should also be limited to one page, especially if you've been in the workforce for a short
+                amount of time.
+                Hiring managers spend only 6 seconds looking through your resume, so it's important to keep it to one
+                page
+                filled with strong keywords to stand out.</p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> What are the most important things to include in my
+                resume? </p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Some essential things to include in your resume
+                are: your name, contact information, education history,
+                work or internship experience.</p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> How can I avoid discrimination during a job search?
+            </p>
+            <p class="font-color"><span class="spans">A&ensp;</span> There is no way to eliminate the possibility that
+                your age, gender, race, disability (in areas not relevant to the position) or religion may be a deciding
+                factor in the decision not to hire you. Although illegal, discrimination during the hiring process is
+                exceedingly difficult to prove since all an employer really has to do is list other reasons why you were
+                not selected for the job.
+                However, with awareness of the reality of discrimination, you can do your best to minimize the potential
+                damage of it by being strategic with your application materials as well as your interview techniques.
+            </p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> How do I save my job search criteria?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Create a Job Agent in your account to save your
+                favorite searches and receive an email when new jobs that match your search criteria are posted. You can
+                set up your Job Agent to search by job category, location, keyword, or a combination of criteria. If you
+                do not yet have an account, you will first need to create an account.
+            </p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> Can I upload other documents in my account?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Yes. You can now upload additional documents to
+                your account, including cover letters, references,
+                publications, transcripts, and more. These materials can then be included when applying for a position
+                through your account.</p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> Can I edit my profile on a later date?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Yes - you can edit your profile at any time by
+                logging in to your account. You can login to your account
+                from the topjobs home page. Once you have logged in, you can select and edit a profile that you have
+                with any company
+            </p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> Can I upload my CV and my photograph along with my
+                profile?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Yes you can upload your CV in .doc, .pdf, .rtf,
+                .txt, .jpg, .gif, .tif or .png format. You can also
+                upload your photograph in .jpg, .gif, .tif or .png format.
+            </p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> How does the employer see my information and my
+                application?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span>When you apply for a vacancy, you can do two things
+                to present your application to the employer. First,
+                you can upload your CV, and other documents such as application cover letter and photographs,
+                testimonials etc. So applying through topjobs is no different to a traditional application - by email or
+                post - but the difference is that you will benefit from the additional features of the topjobs
+                recruitment system - such as straight through processing, and employer feedback information etc. Your
+                application is stored immediately in a database, so there is no chance of getting lost in the post, or
+                getting blocked by a spam filter.
+            </p>
+        </div>
+
+        <div class="q-and-a-bkg">
+            <p class="font-color"><span class="spans">Q&ensp;</span> Should I apply for a job even if I don't have the
+                specified experience?</p>
+            <p class="font-color"><span class="spans">A&ensp;</span> Absolutely! If you think you can handle the job
+                requirements, it never hurts to apply for the position. Whether you have less years of experience than
+                they're asking, or you are missing one of the hard skills mentioned, these don't necessarily rule you
+                out from landing the job. Skills can be learned on the job, and if you're the best candidate, years of
+                experience won't matter in the end. Just don't lie and say you have the qualifications when you don't.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- content area end -->
+
+    <!-- footer class div -->
+    <div id="footer">
+        <iframe src="../html/footer.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- add chat icon to web page -->
+    <div id="chat-btn" onclick="location.href='contacts.html'">
+        <img src="../Images/chat.svg" alt="chat">
+    </div>
+
+    <!-- create back to top div -->
+    <div id="back-to-top">&Lt;</div>
+
+    <!-- scroll function script -->
+    <script>
+        document.querySelector("#back-to-top").addEventListener('click', function () {
+
+            document.body.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- add dropdown JavaScript -->
+    <script src="../JavaScript/dropdowns.js"></script>
+
+</body>
+
+</html>

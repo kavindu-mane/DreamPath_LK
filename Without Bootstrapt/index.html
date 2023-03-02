@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+<!-- set deafult encoding stytem as unicode -->
+<meta charset="UTF-8">
+
+<head>
+    <!-- meta tags -->
+    <meta name="author" content="Kavindu Manahara @ group 7">
+    <meta name="revised" content="10/02/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main-container.css">
+    <link rel="stylesheet" href="css/index-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+
+    <!-- add website icon -->
+    <link rel="icon" href="Images/DreamPath-icon.svg">
+
+    <!-- title of the page -->
+    <title>Home - DreamPath.lk</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <nav id="navbar">
+
+        <!-- logo image -->
+        <img src="Images/DreamPath-white.svg" alt="logo" id="logo" onclick="location.href='index.html'">
+
+        <!-- search icon and theme change icon -->
+        <!-- <img src="Images/search.svg" alt="theme" id="search"> -->
+        <img src="Images/sun.svg" alt="theme" id="theme">
+
+        <!-- include default theme js file -->
+        <script src="JavaScript/default-script.js"></script>
+
+        <!-- this script use for loading with saved theme selection -->
+        <script>
+            localStorage.getItem("theme") == 'theme-dark' ? themeChange('theme-light') : themeChange('theme-dark');
+        </script>
+
+        <!-- navigation bar buttons -->
+        <button id="btn-home" onclick="location.href='index.html'">Home</button>
+        <button id="btn-services" onclick="location.href='html/services.html'">Services</button>
+        <button id="btn-contacts" onclick="location.href='html/contacts.html'">Contact</button>
+        <button id="btn-about" onclick="location.href='html/about.html'">About</button>
+        <button id="btn-more">More <span style="font-size: 12px; margin-bottom:5px">&#11206;</span></button>
+
+        <!-- sign in and sign up button -->
+        <button id="sign-in" class="sign-btns" onclick="location.href='html/signin.html'">Sign in</button>
+        <button id="sign-up" class="sign-btns" onclick="location.href='html/signup.html'">Sign up</button>
+
+        <!-- navigation bar menu button for small displays -->
+        <button id="btn-menu"> <img src="Images/menu.svg" alt="menu"> </button>
+
+    </nav>
+
+    <!-- navigation dropdown for small display divices -->
+    <div id="nav-for-small-divice">
+        <div id="small-btn-home" onclick="location.href='index.html'">Home</div>
+        <div id="small-btn-services" onclick="location.href='html/services.html'">Services</div>
+        <div id="small-btn-contacts" onclick="location.href='html/contacts.html'">Contact</div>
+        <div id="small-btn-about" onclick="location.href='html/about.html'">About</div>
+        <div id="small-btn-more">More <span style="font-size: 10px;">&#11206;</span></div>
+
+        <div class="small-dropdown-itm" onclick="location.href='html/about.html#vision'">Vision</div>
+        <div class="small-dropdown-itm" onclick="location.href='html/about.html#privacy-policy'">Privacy Policy</div>
+        <div class="small-dropdown-itm" onclick="location.href='html/about.html#term-of-use'">Term of use</div>
+        <div class="small-dropdown-itm" onclick="location.href='html/about.html#legal'">Legal</div>
+        <div class="small-dropdown-itm" onclick="location.href='html/faq.html'">FAQ</div>
+
+        <button id="small-sign-in" class="sign-btns" onclick="location.href='html/signin.html'">Sign in</button>
+        <button id="small-sign-up" class="sign-btns" onclick="location.href='html/signup.html'">Sign up</button>
+    </div>
+
+    <!-- more dropdown -->
+    <div id="more-dropdown">
+
+        <div onclick="location.href='html/about.html#vision'">Vision</div>
+        <div onclick="location.href='html/about.html#privacy-policy'">Privacy Policy</div>
+        <div onclick="location.href='html/about.html#term-of-use'">Term of use</div>
+        <div onclick="location.href='html/about.html#legal'">Legal</div>
+        <div onclick="location.href='html/faq.html'">FAQ</div>
+
+    </div>
+
+    <!-- main container start  -->
+    <div id="main-container">
+
+        <!-- main container images -->
+        <img src="Images/img-1.png" alt="img-1">
+
+        <!-- text content -->
+        <div>
+            <p id="p1"><span>DreamPath.lk </span> is a largest and trusted <br>job portel in Sri Lanka.</p>
+            <p id="p2"><span>&check;</span>&ensp; 5000+ Actives jobs &ensp; | &ensp;<span>&check;</span>&ensp; 300+
+                Companies and Employers</p>
+            <p id="p3">Join now, It's <span> free</span>
+                <button class="sign-btns" onclick="location.href='html/signup.html'">Continue</button>
+            </p>
+            <form>
+                <div id="form-line-1">
+                    <input type="text" name="keyword" id="serach_keyword" placeholder="&ensp;Search by skill , job title , keyword & etc.">
+                    <button type="submit" value="submit"><img src="Images/search.svg" alt="search"></button>
+                </div>
+
+                <div id="form-line-2">
+                    <label for="location">choose location:&ensp; </label>
+                    <select name="location" id="location">
+                        <optgroup label="common"></optgroup>
+                        <option value="all">All</option>
+                        <option value="global-remote">Global-remote</option>
+                        <option value="global-physical">Global-physical</option>
+                        <optgroup label="provinces"></optgroup>
+                        <option value="western">Western province</option>
+                        <option value="southern">Southern province</option>
+                        <option value="central">Central province</option>
+                        <option value="sabaragamuwa">Sabaragamuwa province</option>
+                        <option value="uva">Uva province</option>
+                        <option value="northern">Northern province</option>
+                        <option value="eastern">Eastern province</option>
+                        <option value="north-central">North central province</option>
+                        <option value="north-western">North western province</option>
+                    </select>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <!-- main container end -->
+
+    <!-- content and footer area start -->
+    <div id="content-container">
+
+        <!--start content area -->
+        <div id="content-area">
+
+            <!-- feed redirection button -->
+            <div id="feed-redirect">
+                <button class="continue-btns" id="feed-btn" onclick="location.href='html/feed.html'" data-toggle="tooltip"
+                data-placement="right" title="Find or Post Job"><span>Find or Post Job</span></button>
+            </div>
+
+            <!-- new jobs -->
+            <div id="work-from-home">
+                <p class="content-area-titles">Work from Home and remote Jobs<span><img src="Images/fire.svg" alt="Fire"> Trending</span></p>
+                <div id="work-from-home-container">
+
+                    <img src="Images/work-from-home.jpg" alt="work from home" id="work-from-home-background">
+
+                    <div id="work-from-home-text">
+                        <p>We offer new remote and flexible jobs collaboration with world famous 
+                            brands and companies , Sri lankan and international companies in this corona pandemic.</p>
+                        <p id="work-from-p-1"><span>&check; </span>100% hand-screened, high-quality jobs.</p>
+                        <p id="work-from-p-2"><span>&check; </span>Entry-level to executive roles.</p>
+                        <p id="work-from-p-3"><span>&check; </span>50+ career categories.</p>
+                        <p id="work-from-p-4"><span>&check; </span>No ads, junk, or scam.</p>
+                        <p id="work-from-p-5"><span>&check; </span>Sri Lankan Experts in remote and flexible work since 2018.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- careers div start -->
+            <div id="careers">
+                <p class="content-area-titles">Trending Careers</p>
+
+                <div class="details-container-1">
+                    <img src="Images/web-developer.png" alt="images">
+                    <div id="img-1">
+                        <p>Web Developer</p>
+                        <button class="continue-btns"><span>Continue</span></button>
+                    </div>
+                </div>
+
+                <div class="details-container-2">
+                    <img src="Images/grapic-designer.png" alt="images">
+                    <div id="img-2">
+                        <p>Graphics Designer</p>
+                        <button class="continue-btns"><span>Continue</span></button>
+                    </div>
+                </div>
+
+                <div class="details-container-3">
+                    <img src="Images/social-media-manager.png" alt="images">
+                    <div id="img-3">
+                        <p>Social Media Manager</p>
+                        <button class="continue-btns"><span>Continue</span></button>
+                    </div>
+                </div>
+
+                <div class="details-container-4">
+                    <img src="Images/customer-care.png" alt="images">
+                    <div id="img-4">
+                        <p>Customer Care Agent</p>
+                        <button class="continue-btns"><span>Continue</span></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- account create area -->
+            <div id="create-account">
+                <p class="content-area-titles">I' am,</p>
+
+                <div id="create-account-container">
+                    <div id="emp-container">
+
+                        <div id="employer">
+                            <p>Employer</p>
+                            <p>Register as&ensp; <button class="continue-btns" onclick="location.href ='html/signup.html?value=employer'"><span>Employer</span></button></p>
+                        </div>
+
+                        <img src="Images/employer.png" alt="employer-image" id="employer-img"
+                            class="round-corner-bkg">
+                    </div>
+
+                    <div id="wor-container">
+                        <img src="Images/workers.png" alt="worker-image" id="worker-img" class="round-corner-bkg">
+
+                        <div id="worker">
+                            <p>Worker</p>
+                            <p>Register as&ensp; <button class="continue-btns" onclick="location.href ='html/signup.html'"><span>Worker</span></button></p>
+                        </div>
+                    </div>
+
+                    <p id="have-account">Alreday have an account&ensp; <button class="continue-btns" onclick="location.href ='html/signin.html'"><span>log
+                                in</span></button></p>
+
+                </div>
+
+            </div>
+
+            <!-- benitits of using dreamPath.lk -->
+            <div id="benifit">
+                <p class="content-area-titles">Benifit of using DeramPath.lk</p>
+                <p id="benifit-paraghraph">There are so many! Starting with 1,268 of the highest quality remote,
+                    work from home, and flexible jobs in 50+ career categories , our goal is to provide you with
+                    a top-notch job search experience from start to finish… and even beyond!</p>
+                
+                <div id="benifit-content-container" class="round-corner-bkg">
+                    <img src="Images/previous.svg" alt="previous" id="benifit-prev" class="move-btn">
+                    <div id="inner-container">
+
+                        <p id="detail-1-line-1"><span>&check; </span>Access to career coaching and resume reviews</p>
+                        <p> Our fantastic in-house career coaches specialize in remote and flexible job search guidance!</p>
+                        <p id="detail-1-line-2"><span>&check; </span>Level up with skills courses, webinars, and more!
+                        </p>
+                        <p>Increase your chances of job search success with in-depth expert resources, events, and
+                            virtual job fairs.</p>
+
+                    </div>
+                    <img src="Images/next.svg" alt="previous" id="benifit-next" class="move-btn">
+                </div>
+
+            </div>
+
+            <!-- colobarations -->
+            <div id="collaborations">
+                <p class="content-area-titles">Great employers offering remote and flexible jobs</p>
+                <div id="collaborations-logos-1">
+
+                    <img src="Images/asus.png" alt="Asus">
+                    <img src="Images/att.png" alt="AT&T">
+                    <img src="Images/hp.png" alt="hp">
+                    <img src="Images/ebay.png" alt="ebay">
+                    <img src="Images/uber.png" alt="uber">
+
+                </div>
+                <div id="collaborations-logos-2">
+
+                    <img src="Images/samsung.png" alt="samsung">
+                    <img src="Images/spotify.png" alt="spotify">
+                    <img src="Images/walmart.png" alt="walmart">
+                    <img src="Images/marriott.png" alt="marriott">
+                    <img src="Images/microsoft.png" alt="microsoft">
+
+                </div>
+            </div>
+
+            <!-- careers div end -->
+            <div id="feedback">
+                <p class="content-area-titles" id="feedback-title">Reviews</p>
+
+                <div id="feedback-container" class="round-corner-bkg">
+
+                    <img src="Images/previous.svg" alt="move-btn" id="feedback-left-move" class="move-btn">
+
+                    <img src="Images/up-quote.svg" alt="up-quote" id="start-comma">
+                    <p id="feedback-content">This is a tremendous service, and such a relief to be able to
+                        apply to jobs knowing that the companies have already been vetted.</p>
+                    <img src="Images/down-quote.svg" alt="up-quote" id="end-comma">
+
+                    <img src="Images/next.svg" alt="move-btn" id="feedback-right-move" class="move-btn">
+
+                </div>
+
+                <!-- <img src="Images/engineer.png" alt="pro pic" id="pro-pic"> -->
+                <p id="name-details">-T.G.H.Herath-<br>Manager<br>Vijaya grapics Pvt Ltd</p>
+
+                <div id="write-review"><button class="continue-btns" style="font-family: Kanit, sans-serif;" onclick="location.href='html/feedback.html'">
+                    <span>Write a Review</span></button></div>
+
+            </div>
+
+        </div>
+        <!-- end content area -->
+
+        <!-- footer class div -->
+        <div id="footer">
+            <iframe src="html/footer.html" frameborder="0"></iframe>
+        </div>
+
+    </div>
+    <!-- content and footer area grid end -->
+
+    <!-- add chat icon to web page -->
+    <div id="chat-btn" onclick="location.href='html/contacts.html'">
+        <img src="Images/chat.svg" alt="chat">
+    </div>
+
+    <!-- create back to top div -->
+    <div id="back-to-top">&Lt;</div>
+
+    <!-- scroll function script -->
+    <script>
+        document.querySelector("#back-to-top").addEventListener('click', function () {
+
+            document.body.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+    <!-- add dropdown JavaScript -->
+    <script src="JavaScript/dropdowns.js"></script>
+    <!-- add animations JavaScript -->
+    <script src="JavaScript/animations.js"></script>
+    <!-- add main script JavaScript -->
+    <script src="JavaScript/index-script.js"></script>
+</body>
+</html>

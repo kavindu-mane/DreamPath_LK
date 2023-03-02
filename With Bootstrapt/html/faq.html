@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="author" content="Dinuk Samarakoon @ group 7" />
+  <meta name="revised" content="04/03/2022" />
+  <meta name="viewport" content="width = device-width, initial-scale=1.0" />
+  <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies " />
+
+  <!-- link bootstrap , font awesome , css and fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../css/faq-style.css" />
+  <link rel="stylesheet" href="../css/default.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- add website icon -->
+  <link rel="icon" href="../Images/DreamPath-icon.svg" />
+  <title>FAQ - DreamPath.lk</title>
+</head>
+
+<body>
+  <!-- header -->
+  <nav class="navbar navbar-expand-md pt-md-3 pb-md-3 d-flex justify-content-end navbar-dark"
+    style="background-color:var(--header-color)" id="navbarID">
+    <div class="container-md">
+      <a href="../html/index.html" class="navbar-brand lead" id="brand" data-bs-toggle="tooltip"
+        data-bs-placement="bottom" title="Home">
+        <span class="red fw-bolder" onclick="location.href='index.html'">D</span>ream<span
+          class="red fw-bolder">P</span>ath<span class="red fw-bolder">.lk</span>
+        <!-- <img src="../Images/DreamPath-white.svg" alt="logo" id="logo" width="150" height="30"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="logo"> -->
+      </a>
+
+      <!-- navbar menu button -->
+      <button type="button" id="menu-btn" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="d-md-none me-2"
+        area-contrals="navbarNav" area-expanded="false" area-label="toggle navigation">
+        <i class="fa-solid fa-bars" style="color: white"></i>
+      </button>
+
+      <!-- navbar-toggler" -->
+      <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ps-lg-4 ps-md-1 ps-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home">
+            <a href="index.html" class="nav-link">
+              <span class="active-pg">Home</span>
+            </a>
+          </li>
+
+          <li class="nav-item ps-lg-4 ps-md-1 ps-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Service">
+            <a href="index.html" class="nav-link"> Service </a>
+          </li>
+
+          <li class="nav-item ps-lg-4 ps-md-1 ps-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contact">
+            <a href="index.html" class="nav-link"> Contact </a>
+          </li>
+
+          <li class="nav-item ps-lg-4 ps-md-1 ps-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="About">
+            <a href="index.html" class="nav-link"> About </a>
+          </li>
+
+          <li class="nav-item dropdown ps-lg-4 ps-md-1 ps-2" data-bs-toggle="tooltip" data-bs-placement="right"
+            title="More">
+            <a href="#" class="nav-link dropdown-toggle" id="moreDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More
+            </a>
+
+            <!-- dropdown -->
+            <ul class="dropdown-menu header-color p-0 mt-3" aria-labelledby="moreDropdown">
+              <li>
+                <a class="dropdown-item pt-2 pb-2 ps-lg-3 ps-5 text-white dropdown-color border-bottom border-top border-secondary font-default"
+                  href="#">Vision</a>
+              </li>
+              <li>
+                <a class="dropdown-item pt-2 pb-2 ps-lg-3 ps-5 text-white dropdown-color border-bottom border-secondary font-default"
+                  href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a class="dropdown-item pt-2 pb-2 ps-lg-3 ps-5 text-white dropdown-color border-bottom border-secondary font-default"
+                  href="#">Term of use</a>
+              </li>
+              <li>
+                <a class="dropdown-item pt-2 pb-2 ps-lg-3 ps-5 text-white dropdown-color border-bottom border-secondary font-default"
+                  href="#">Legal</a>
+              </li>
+              <li>
+                <a class="dropdown-item pt-2 pb-2 ps-lg-3 ps-5 text-white dropdown-color border-bottom border-secondary font-default"
+                  href="#">FAQ</a>
+              </li>
+            </ul>
+          </li>
+
+          <div class="row ps-lg-4 ps-md-1 mt-4 mb-4 mt-md-0 mb-md-0">
+            <li class="nav-item col-6 d-flex justify-content-end">
+              <a href="index.html" class="nav-link buttons text-white p-1 mt-1" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" title="Sign in">
+                Sign in
+              </a>
+            </li>
+
+            <li class="nav-item ps-md-1 ps-2 col-6 d-flex justify-content-start">
+              <a href="signup.html" class="nav-link buttons text-white p-1 mt-1" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" title="Sign up">
+                Sign up
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- details -->
+  <div class="pt-4 container-fluid">
+    <h1 class="text-center mb-3" style="color: #38cc87">FAQ</h1>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> Can I apply for several jobs at the same time?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Of course. If there is more than one job on offer
+        that you feel corresponds to your profile and career
+        goals,
+        you may apply for two or more jobs simultaneously.</p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> How long should I make my cover letter and/or
+        resume?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Your cover letter should be no more than one page
+        in length.
+        It should explain who you are and why you're the best candidate for the job. It needs to be very
+        concise,
+        yet keep the hiring manager wanting to learn more. If you go any longer than a page, the person reading
+        it will get bored.
+        Your resume should also be limited to one page, especially if you've been in the workforce for a short
+        amount of time.
+        Hiring managers spend only 6 seconds looking through your resume, so it's important to keep it to one
+        page
+        filled with strong keywords to stand out.</p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> What are the most important things to include in my
+        resume? </p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Some essential things to include in your resume
+        are: your name, contact information, education history,
+        work or internship experience.</p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> How can I avoid discrimination during a job search?
+      </p>
+      <p class="font-color"><span class="spans">A&ensp;</span> There is no way to eliminate the possibility that
+        your age, gender, race, disability (in areas not relevant to the position) or religion may be a deciding
+        factor in the decision not to hire you. Although illegal, discrimination during the hiring process is
+        exceedingly difficult to prove since all an employer really has to do is list other reasons why you were
+        not selected for the job.
+        However, with awareness of the reality of discrimination, you can do your best to minimize the potential
+        damage of it by being strategic with your application materials as well as your interview techniques.
+      </p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> How do I save my job search criteria?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Create a Job Agent in your account to save your
+        favorite searches and receive an email when new jobs that match your search criteria are posted. You can
+        set up your Job Agent to search by job category, location, keyword, or a combination of criteria. If you
+        do not yet have an account, you will first need to create an account.
+      </p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> Can I upload other documents in my account?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Yes. You can now upload additional documents to
+        your account, including cover letters, references,
+        publications, transcripts, and more. These materials can then be included when applying for a position
+        through your account.</p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> Can I edit my profile on a later date?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Yes - you can edit your profile at any time by
+        logging in to your account. You can login to your account
+        from the topjobs home page. Once you have logged in, you can select and edit a profile that you have
+        with any company
+      </p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> Can I upload my CV and my photograph along with my
+        profile?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Yes you can upload your CV in .doc, .pdf, .rtf,
+        .txt, .jpg, .gif, .tif or .png format. You can also
+        upload your photograph in .jpg, .gif, .tif or .png format.
+      </p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> How does the employer see my information and my
+        application?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span>When you apply for a vacancy, you can do two things
+        to present your application to the employer. First,
+        you can upload your CV, and other documents such as application cover letter and photographs,
+        testimonials etc. So applying through topjobs is no different to a traditional application - by email or
+        post - but the difference is that you will benefit from the additional features of the topjobs
+        recruitment system - such as straight through processing, and employer feedback information etc. Your
+        application is stored immediately in a database, so there is no chance of getting lost in the post, or
+        getting blocked by a spam filter.
+      </p>
+    </div>
+    <div class="container shadow my-4 px-md-3 px-lg-4 feedback-div">
+      <p class="font-color"><span class="spans">Q&ensp;</span> Should I apply for a job even if I don't have the
+        specified experience?</p>
+      <p class="font-color"><span class="spans">A&ensp;</span> Absolutely! If you think you can handle the job
+        requirements, it never hurts to apply for the position. Whether you have less years of experience than
+        they're asking, or you are missing one of the hard skills mentioned, these don't necessarily rule you
+        out from landing the job. Skills can be learned on the job, and if you're the best candidate, years of
+        experience won't matter in the end. Just don't lie and say you have the qualifications when you don't.
+      </p>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer" class="container-fluid pt-5 mt-5">
+    <div class="row d-flex justify-content-center text-center text-md-start">
+      <div class="col-12 col-md-3 col-lg-2 pb-3">
+        <div class="w-100 mb-2">
+          <span class="heading">Shortcuts</span>
+        </div>
+        <div onclick="location.href='index.html'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Home</span>
+        </div>
+
+        <div onclick="location.href='services.html'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Services</span>
+        </div>
+
+        <div onclick="location.href='contacts.html'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Contact us</span>
+        </div>
+
+        <div onclick="location.href='about.html'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;About us</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 col-lg-2 pb-3">
+        <div class="w-100 mb-2">
+          <span class="heading">Contact info</span>
+        </div>
+        <div class="mb-1">
+          <i class="fa-solid fa-phone" style="color: #fa921b"></i><span class="font-footer">&ensp;+94 114 55 1823</span>
+        </div>
+        <div class="mb-1">
+          <i class="fa-solid fa-envelope" style="color: #fa921b"></i><span
+            class="font-footer">&ensp;info@dreampathlk.com</span>
+        </div>
+        <div class="mb-1">
+          <i class="fa-solid fa-location-dot" style="color: #fa921b"></i><span class="font-footer">&ensp;No 40/1,<br />
+            &emsp; Galle Road,<br />
+            &emsp; Wellawatte,<br />
+            &emsp; Colombo 06.</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 col-lg-2 pb-3">
+        <div class="w-100 mb-2">
+          <span class="heading">Find us on</span>
+        </div>
+        <!-- we don't add social network account therefore we link our home page -->
+        <div onclick="location.href='index.html'" class="mb-1">
+          <i class="fa-brands fa-facebook-square" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Facebook</span>
+        </div>
+
+        <div onclick="location.href='index.html'" class="mb-1">
+          <i class="fa-brands fa-instagram-square" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Instagram</span>
+        </div>
+
+        <div onclick="location.href='index.html'" class="mb-1">
+          <i class="fa-brands fa-twitter-square" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Twitter</span>
+        </div>
+        <div onclick="location.href='index.html'" class="mb-1">
+          <i class="fa-brands fa-linkedin" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Linkedin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center text-center text-md-start pb-5">
+      <div class="col-12 col-md-4 col-lg-3 pb-3">
+        <div class="w-100 mb-2">
+          <span class="heading">Terms & condition</span>
+        </div>
+
+        <div class="mb-1 font-footer pe-5 ps-5 ps-md-0">
+          This Website uses cookies to make the website work, for
+          optimization of page content.By using our Website, you agree to
+          the use of cookies for these purposes.
+        </div>
+
+        <div onclick="parent.location.href='../html/about.html#vision'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Vision</span>
+        </div>
+
+        <div onclick="parent.location.href='../html/about.html#privacy-policy'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Privacy Policy</span>
+        </div>
+
+        <div onclick="parent.location.href='../html/about.html#term-of-use'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Term of use</span>
+        </div>
+
+        <div onclick="parent.location.href='../html/about.html#legal'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;Legal</span>
+        </div>
+
+        <div onclick="parent.location.href='../html/faq.html'" class="mb-1">
+          <i class="fa-solid fa-square-arrow-up-right" style="color: #fa921b"></i><span
+            class="font-footer add-hover">&ensp;FAQ</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="w-100 mb-2">
+          <span class="heading">Find us on google map</span>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36733.46911274546!2d79.88955924657742!3d6.884018213207136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1644002340437!5m2!1sen!2slk"
+          style="border: 0" allowfullscreen="" loading="lazy" height="250">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- copyright -->
+  <div class="d-flex justify-content-center text-center">
+    <p class="font-footer copyright m-0">
+      <span>&copy;</span> DreamPath.lk - 2022 &ensp; | &ensp; Solution by
+      TEAM-7
+    </p>
+  </div>
+
+  <!-- add chat icon to web page -->
+  <div id="chat-btn">
+    <img src="../Images/chat.svg" alt="chat" data-bs-toggle="tooltip" data-bs-placement="top" title="Contacts us" />
+  </div>
+
+  <!-- create back to top div -->
+  <div id="back-to-top" data-bs-toggle="tooltip" data-bs-placement="left" title="back to top">
+    &Lt;
+  </div>
+
+  <!-- theme change icon -->
+  <div class="position-fixed start-0 p-1 ps-2 bottom-0 mb-3" id="theme" data-bs-toggle="tooltip"
+    data-bs-placement="right" title="theme">
+    <i class="fa-solid fa-sun fa-2x"></i>
+  </div>
+
+  <!-- chat button setting -->
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        document.querySelector("#chat-btn").style.right = "20px";
+      }, 5000);
+    };
+  </script>
+
+  <!-- scroll function script (for back to top) -->
+  <script>
+    window.onscroll = function () {
+
+      if (document.documentElement.scrollTop > 100) {
+        document.querySelector("#back-to-top").style.bottom = "15px";
+      } else {
+        document.querySelector("#back-to-top").style.bottom = "-50px";
+      }
+    }
+  </script>
+
+  <!-- back to top script -->
+  <script>
+    document
+      .querySelector("#back-to-top")
+      .addEventListener("click", function () {
+        document.body.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+  </script>
+
+  <!-- theme change script -->
+  <script>
+    localStorage.getItem("theme") === "theme-dark"
+      ? themeChange("theme-light")
+      : themeChange("theme-dark");
+
+    document.querySelector("#theme").addEventListener("click", function () {
+      themeChange(localStorage.getItem("theme"));
+    }); // theme change click event
+
+    function themeChange(theme) {
+      if (theme === "theme-dark") {
+        document.documentElement.className = "theme-light";
+        localStorage.setItem("theme", "theme-light");
+        document.querySelector("#theme i").className =
+          "fa-solid fa-sun fa-2x";
+      } else {
+        document.documentElement.className = "theme-dark";
+        localStorage.setItem("theme", "theme-dark");
+        document.querySelector("#theme i").className =
+          "fa-solid fa-moon fa-2x";
+      }
+    }
+
+  </script>
+
+  <!-- bootstrap script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- script for toooltip -->
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+
+</html>

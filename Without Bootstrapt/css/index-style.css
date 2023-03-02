@@ -1,0 +1,1088 @@
+/* solution by kavindu manahara @group 7 */
+
+/* light theme */
+.theme-light{
+    --background-color:#f5f5f5;
+    --feedback-area-color:#a64dff;
+    --container-area-color:#ffffff;
+    --shadow-color:#53515168;
+    --font-color: #000000;
+    --font-color-invers: #ffffff;
+    --work-from-background-color:#a64dff;
+}
+
+/* dark theme */
+.theme-dark{
+    --background-color:#2C394B;
+    --feedback-area-color:#142850;
+    --container-area-color:#2D4263;
+    --shadow-color:#27262678;
+    --font-color: #ffffff;
+    --font-color-invers: #000000;
+    --work-from-background-color:#0b5269;
+}
+
+/* -----------------------------------------------------------------content container style section start------------------------------------------------------------- */
+
+/* create div area */
+#content-container{
+    position:absolute;
+    width: 100%;
+    display: block;
+    justify-content: center;
+}
+
+/* content container start position */
+@media (min-height:600px){
+    #content-container{
+        top: 100%;
+    }
+}
+@media (max-height:600px){
+    #content-container{
+        top: 600px;
+    }
+}
+@media (min-height:1000px){
+    #content-container{
+        top: 1000px;
+    }
+}
+
+/* -----------------------------------------------------------------feed redirect section start------------------------------------------------------------- */
+
+/* feed redirect container */
+#feed-redirect{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* feed redirect button */
+#feed-redirect button{
+    width: 15%;
+    min-width: 250px;
+    transition: 0.5s;
+    -moz-transition: 0.5;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+/* -----------------------------------------------------------------feed redirect  section start------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------work from home section start------------------------------------------------------------- */
+
+/* work from home container */
+#work-from-home{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* trenging tag */
+#work-from-home p span{
+    font-size: 15px;
+    color: #ff3333;
+    font-weight: 600;
+}
+
+/* fire image */
+#work-from-home p span img{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+/* container */
+#work-from-home-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: var(--work-from-background-color);
+    box-shadow: 0 8px 8px var(--shadow-color);
+}
+
+/* text area */
+#work-from-home-text{
+    width: 50%;
+    height: auto;
+}
+
+/* first line */
+#work-from-home-text p:first-child{
+    text-align: center;
+    width: 90%;
+    margin: 0 5% ;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* next liners */
+#work-from-home-text p:not(:first-child){
+    margin-left: 10%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+/* next line cotrrection mark */
+#work-from-home-text p:not(:first-child) span{
+    color: #38cc87;
+    font-weight: 900;
+}
+
+
+/* image  */
+#work-from-home-background{
+    width: 50%;
+    height: auto;
+    opacity: 0.8;
+    box-shadow: 8px 0px 8px var(--shadow-color);
+}
+
+/* -----------------------------------------------------------------work from home section end------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------career style section start------------------------------------------------------------- */
+
+.details-container-1{grid-area: details-ctr-1;}
+.details-container-2{grid-area: details-ctr-2;}
+.details-container-3{grid-area: details-ctr-3;}
+.details-container-4{grid-area: details-ctr-4;}
+.content-area-titles{grid-area: content-area-titles;}
+
+/* career div styles */
+#content-container #content-area #careers{
+    height: auto;
+    display: grid;
+    align-items: center;
+    width: 90%;
+    padding: 0 5% 0;
+}
+
+/* round corner container */
+[class*='details-container-'] , .round-corner-bkg{
+    background-color: var(--container-area-color);
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px 8px 8px var(--shadow-color);
+    border:1px solid var(--shadow-color);
+    overflow: hidden;
+    height: auto;
+    width: 90%;
+    margin: 1% 5% 10%;
+    transition: transform 500ms ;
+    -o-transition:  -o-transform 500ms; /*for opera*/
+    -moz-transition:  -moz-transform 500ms; /*for firefox*/
+    -webkit-transition:  -webkit-transform 500ms; /*for safari*/
+}
+
+/* titles */
+.content-area-titles{
+    color: var(--font-color);
+    text-align: left;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 30px;
+}
+
+/* career images */
+#careers [class*='details-container-'] > img:first-child{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    opacity: 0.7;
+    box-shadow: -2px 8px 8px var(--shadow-color);
+    transition: transform 500ms ;
+    -o-transition:  -o-transform 500ms; /*for opera*/
+    -moz-transition:  -moz-transform 500ms; /*for firefox*/
+    -webkit-transition:  -webkit-transform 500ms; /*for safari*/
+}
+
+/* image hovers style */
+#careers [class*='details-container-'] > img:first-child:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+
+/* career text and button */
+[id*='img-']{
+    /* z-index: 1; */
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+}
+
+/* career area p */
+[id*='img-'] p{
+    margin: 10px 0 0;
+    padding: 0;
+    font-family:'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--font-color);
+    transition: 500ms;
+    -o-transition: 500ms; /*for opera*/
+    -moz-transition: 500ms; /*for firefox*/
+    -webkit-transition: 500ms; /*for safari*/
+    
+}
+
+/* button home color change */
+#navbar #btn-home , #small-btn-home{
+    background-color: #089755;
+}
+
+/* career area hover */
+[id*='img-']:hover{
+    cursor: pointer;
+}
+
+/* career area p tag hover */
+[id*='img-']:hover p{
+    color: var(--font-color-invers);
+}
+
+/* career area button */
+.continue-btns{
+    background-color:#d67322 ;
+    border: none;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: -2px 2px 5px var(--shadow-color);
+    font-size: 15px;
+    /* padding: 0 15px 3px; */
+    /* margin: 27px 20px 23px ; */
+    border-radius: 5px;
+    height: 30px;
+    margin: 30px 0 0;
+    width: 100px;
+    padding: 0 auto 0;
+}
+
+/*  career area button span tag */
+.continue-btns span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    -o-transition: 0.5s; /* for opera*/
+    -moz-transition: 0.5s; /* for firefox*/
+    -webkit-transition: 0.5s; /* for safari*/
+}
+
+/* button span style */
+.continue-btns span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    right: -15px;
+    transition: 0.5s;
+    -o-transition: 0.5s; /* for opera*/
+    -moz-transition: 0.5s; /* for firefox*/
+    -webkit-transition: 0.5s; /* for safari*/
+}
+
+/* button hover colour change */
+.continue-btns:hover {
+    background-color: #38cc87;
+}
+
+/*  career area button tag hover */
+.continue-btns:hover span {
+    padding-right: 17px;
+}
+
+  /* hover after visibility style */
+.continue-btns:hover span::after{
+    opacity: 1;
+    right: 5px;
+}
+
+/* -----------------------------------------------------------------career style section end------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------create account style section start------------------------------------------------------------- */
+
+/* create account style */
+#create-account{
+    width: 100%;
+    padding: 30px 0 30px;
+    /* padding-top: 50%; */
+    text-align: left;
+    transition: 1000ms; 
+    -o-transition: 1000ms; /*for opera */
+    -moz-transition: 1000ms; /*for firefox */
+    -webkit-transition: 1000ms; /*or safari */
+
+ }
+
+/* create account heading */
+#create-account p:first-child{
+    color: white;
+}
+
+/* employer and worker container  */
+#create-account #emp-container , #create-account #wor-container{
+    width: 90%;
+    margin: 0 5% 0;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* employer and worker text and button containers */
+#employer , #worker{
+    text-align: center;
+    margin-top: auto;
+    justify-content: center;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+/* employer register buttons */
+#employer > p > button , #worker > p > button{
+    margin: 0;
+}
+
+/* employer and worker words */
+#employer > p:first-child, #worker >p:first-child{
+    font-family:'Nunito', sans-serif;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* employer and worker 2nd textline with button */
+#employer > p:nth-child(2), #worker >p:nth-child(2){
+    font-family:'Nunito', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* employer and worker images */
+#employer-img , #worker-img{
+    height: auto;
+    border-radius: 20px;
+    margin: 0;
+}
+
+/* logging button */
+#have-account{
+    color:#ffffff;
+    text-align: center;
+}
+
+/* have account redirecct button */
+#have-account button{
+    border-radius: 30px;
+    margin-top: 0;
+    background-color: #38cc87;
+}
+/* -----------------------------------------------------------------create account style section end------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------benifit style section start------------------------------------------------------------- */
+
+/* benifit container */
+#benifit{
+    width: 100%;
+    height: auto;
+    margin: 0 0 100px;
+}
+
+/* benifit heading */
+#benifit > p:first-child{
+    width: 100%;
+    color: white;
+}
+
+/* benifit content */
+#benifit-paraghraph{
+    color: var(--font-color);
+    font-family:'Nunito', sans-serif;
+    text-align: center;
+}
+
+/* benifit main container */
+#benifit-content-container{
+    height: auto;
+    display: flex;
+    border-radius: 15px;
+}
+
+/* benifit detail container */
+#inner-container{
+    width:90%;
+    padding: 20px 5% 20px;
+    overflow-x: hidden;
+}
+
+#inner-container p{
+    font-family: 'Nunito', sans-serif;
+    color: #38cc87;
+    transition: 500ms; 
+    -o-transition: 500ms; /*for opera */
+    -moz-transition: 500ms; /*for firefox */
+    -webkit-transition: 500ms; /*or safari */
+
+}
+
+#inner-container p:nth-child(2) , #inner-container p:nth-child(4){
+    margin-left: 5%;
+    color: var(--font-color);
+}
+
+/* inner container spans */
+#inner-container span{
+    color: #38cc87;
+    font-weight: 900;
+}
+
+#benifit-prev{
+    height: auto;
+}
+
+#benifit-next{
+    height: auto;
+}
+
+/* -----------------------------------------------------------------benifit style section end------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------feedback style section start------------------------------------------------------------- */
+
+/* feedback style */
+#content-container #content-area #feedback{
+    padding: 0 0 30px;
+    transition: 10ms;
+    -o-transition: 10ms; /*for opera*/
+    -moz-transition: 10ms; /*for firefox*/
+    -webkit-transition: 10ms; /*for safari*/
+    display:block;
+    width: 100%;
+    height: auto;
+    display:block;
+    overflow-x: hidden;
+    align-items: center;
+
+}
+
+/* feedback heading */
+#feedback #feedback-title{
+    color: white;
+    padding: 0 0 10px;
+    width: 100%;
+    margin-top: 0;
+}
+
+/* feedback container style */
+#feedback-container{
+    display: flex;
+    width: 50%;
+    margin: 0 25% 0;
+    box-shadow: -2px 5px 10px var(--shadow-color);
+    border-radius: 12px;
+    text-align: left;
+    transition: 1000ms; 
+    -o-transition: 1000ms; /*for opera */
+    -moz-transition: 1000ms; /*for firefox */
+    -webkit-transition: 1000ms; /*or safari */
+}
+
+/* feedback text container with round corner background */
+#feedback-container #feedback-content{
+    padding: 3% 8% 3%;
+    font-family:'Nunito', sans-serif;
+    color: var(--font-color);
+    margin: 0;
+    text-align: center;
+}
+
+/* start and end comma styles */
+#feedback-container #start-comma ,#feedback-container #end-comma{
+    width: 5%;
+    height: 5%;
+}
+
+/* 2 commas in review section */
+#start-comma{
+    margin-left: 5%;
+    margin-bottom: auto;
+    margin-top: 3%;
+}
+
+#end-comma{
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: 3%;
+}
+
+/* feedback user */
+#pro-pic{
+    max-width: 50px;
+    width: 5%;
+    min-width: 30px;
+    margin: 5% auto 2%;
+    justify-content: center;
+    border-radius: 100%;
+    display: flex;
+    border: 3px solid #ffffffff;
+
+}
+
+/* name and details of comentrter */
+#name-details{
+    text-align: center;
+    color: #dfdfdf;
+    font-family:'Kanit', sans-serif;
+    line-break: auto;
+}
+
+/* feedback area move button */
+.move-btn{
+    width: 3%;
+    min-width: 30px;
+    min-height: 30px;
+    height: 3%;
+    justify-content:center;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+    -o-transition: 0.5s; /* for opera*/
+    -moz-transition: 0.5s; /* for firefox*/
+    -webkit-transition: 0.5s; /* for safari*/
+}
+
+/* feedback area move button hover */
+.move-btn:hover {
+    opacity: 1;
+}
+
+/* left move button */
+#feedback-left-move{
+    left: 18%;
+}
+
+/* righht move button */
+#feedback-right-move{
+    right: 18%;
+}
+
+/* write review button */
+#write-review{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* review write button */
+#write-review button{
+    width: 200px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+/* -----------------------------------------------------------------create account style section end------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------collaborations style section start------------------------------------------------------------- */
+
+/* collaborations container */
+#collaborations{
+    width: 100%;
+    height: auto;
+    padding: 0 0  30px;
+}
+
+/* collaborations heading */
+#collaborations > p{
+    width: 80%;
+    padding: 0 10% 0;
+}
+
+/* collaborations icon lines */
+#collaborations-logos-1 , #collaborations-logos-2{
+    display: flex;
+    justify-content: center;
+}
+
+/* collaborations icons */
+#collaborations-logos-1 img, #collaborations-logos-2 img{
+    width: 5%;
+    height: 5%;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 15%;
+    background-color: #ffffff;
+    box-shadow: -2px 4px 2px var(--shadow-color);
+}
+
+/* -----------------------------------------------------------------collaborations style section end------------------------------------------------------------- */
+
+/* content area item styles end*/
+
+/* contant area footer style */
+#content-container #footer iframe{
+    width:100%;
+    border-start-end-radius: 20px;
+    border-start-start-radius: 20px;
+}
+
+/* -----------------------------------------------------------------content container style section end------------------------------------------------------------- */
+
+@media (max-width:768px){
+    #content-container #footer iframe{
+        height: 925px;
+    }
+
+    /* #content-container #content-area #careers{
+        grid-template-areas: 
+                            'content-area-titles '
+                            'details-ctr-1'
+                            'details-ctr-2'
+                            'details-ctr-3'
+                            'details-ctr-4';
+    } */
+
+    #content-container #content-area #careers{
+        grid-template-areas: 
+                            'content-area-titles content-area-titles '
+                            'details-ctr-1 details-ctr-2'
+                            'details-ctr-3 details-ctr-4' ;
+    }
+
+    [id*='img-'] p{
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+    .content-area-titles{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #feedback-content{
+        font-size: 10px;
+    }
+
+    #name-details{
+        font-size: 8px;
+    }
+
+    #employer > p:first-child, #worker >p:first-child{
+        font-size: 24px;
+        text-shadow: 0 0 20px black;
+    }
+    
+    #employer > p:nth-child(2), #worker >p:nth-child(2){
+        font-size: 16px;
+        text-shadow: 0 0 20px black;
+    }
+
+    /* #employer-img , #worker-img{
+        width: 100%;
+        margin-bottom: 5%;
+        opacity: 0.7;
+    }
+
+    #employer , #worker{
+        width: 100%;
+        position: absolute;
+    } */
+
+    #employer-img  , #worker-img{
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    #employer , #worker{
+        width: 50%;;
+        position: relative;
+    }
+
+    #benifit-paraghraph{
+        width: 90%;
+        padding: 20px 5% 20px;
+        font-size: 12px;
+    }
+
+    #benifit-content-container{
+        width: 96%;
+        margin: 0 2% 0;
+    }
+
+    #inner-container{
+        font-size: 12px;
+    }
+
+    #inner-container span{
+        font-size: 15px;
+    }
+
+    #benifit-prev{
+        left: 1%;
+    }
+    
+    #benifit-next{
+        right: 1%;
+    }
+
+    #work-from-home p span{
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    #work-from-home p span img{
+        width: 10px;
+        height: 10px;
+    }
+
+    #work-from-home-text{
+        position: absolute;
+        margin: 0 1%;
+        background-color: #00000051;
+        padding: 4%;
+    }
+
+    #work-from-home-background{
+        width: 100%;
+    }
+
+    #work-from-home-text p:not(:first-child){
+        font-size: 12px;
+    }
+
+    #work-from-home-text p:first-child{
+        font-size: 12px;
+    }
+
+    #work-from-home-text p:not(:first-child) span{
+        font-size: 15px;
+    }
+
+    #write-review span{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width:600px){
+    #content-container #content-area #careers{
+        grid-template-areas: 
+                            'content-area-titles '
+                            'details-ctr-1'
+                            'details-ctr-2'
+                            'details-ctr-3'
+                            'details-ctr-4';
+    }
+
+    #employer-img , #worker-img{
+        width: 100%;
+        margin-bottom: 5%;
+        opacity: 0.7;
+    }
+
+    #employer , #worker{
+        width: 100%;
+        position: absolute;
+    }
+
+    #work-from-home-text{
+        width: 90%;
+    }
+
+    #write-review span{
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width:460px){ /*these values are checked values for devices*/
+    #content-container #footer iframe{
+        height: 935px;
+    }
+
+    [id*='img-'] p{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    #feedback-container{
+        width: 80%;
+        margin: 0 10% 0;
+    }
+
+    #feedback-left-move{
+        left: 1%;
+    }
+    
+    #feedback-right-move{
+        right: 1%;
+    }
+
+    #write-review button{
+        width: 130px;
+    }
+
+    #collaborations-logos-1 img, #collaborations-logos-2 img{
+        height: 8%;
+        width: 8%;
+    }
+
+    #work-from-home-text{
+        padding: 1%;
+        width: 96%;
+    }
+
+    #work-from-home-text p:not(:first-child){
+        font-size: 10px;
+    }
+
+    #work-from-home-text p:first-child{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    #work-from-home-text p:not(:first-child) span{
+        font-size: 12px;
+    }
+        
+}
+
+@media (max-width:308px){ /*these values are checked values for devices*/
+    #content-container #footer iframe{
+        height: 950px;
+    }
+}
+
+@media (min-width:768px){
+    #content-container #footer iframe{
+        height: 440px;
+    }
+
+    #content-container #content-area #careers{
+        grid-template-areas: 
+                            'content-area-titles content-area-titles '
+                            'details-ctr-1 details-ctr-2'
+                            'details-ctr-3 details-ctr-4' ;
+    }
+
+    .content-area-titles{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #feedback-content{
+        font-size: 15px;
+    }
+
+    #name-details{
+        font-size: 12px;
+    }
+
+    #employer > p:first-child, #worker >p:first-child{
+        font-size: 24px;
+    }
+    
+    #employer > p:nth-child(2), #worker >p:nth-child(2){
+        font-size: 16px;
+    }
+
+    #employer-img  , #worker-img{
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    #employer , #worker{
+        width: 50%;;
+        position: relative;
+    }
+
+    #benifit-paraghraph{
+        width: 80%;
+        padding: 20px 10% 20px;
+        font-size: 15px;
+    }
+
+    #benifit-content-container{
+        width: 80%;
+        margin: 0 10% 0;
+    }
+
+    #inner-container{
+        font-size: 15px;
+    }
+
+    #inner-container span{
+        font-size: 20px;
+    }
+
+    #benifit-prev{
+        left: 10%;
+    }
+    
+    #benifit-next{
+        right: 10%;
+    }
+
+    #work-from-home-text{
+        position: absolute;
+        margin-left: 1%;
+        background-color: #00000051;
+        padding: 5%;
+    }
+
+    #work-from-home-background{
+        width: 100%;
+    }
+
+    #work-from-home-text p:not(:first-child){
+        font-size: 15px;
+    }
+
+    #work-from-home-text p:first-child{
+        font-size: 15px;
+    }
+
+    #work-from-home-text p:not(:first-child) span{
+        font-size: 20px;
+    }
+
+    #write-review span{
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (min-width:992px){
+    #content-container #footer iframe{
+        height: 490px;
+    }
+
+    #content-container #content-area #careers{
+        grid-template-areas: 
+                            'content-area-titles content-area-titles '
+                            'details-ctr-1 details-ctr-2'
+                            'details-ctr-3 details-ctr-4' ;
+        padding: 0 15% 0;
+        width: 70%;
+    }
+
+    .content-area-titles{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #feedback-content{
+        font-size: 18px;
+    }
+
+    #name-details{
+        font-size: 16px;
+    }
+
+    #employer > p:first-child, #worker >p:first-child{
+        font-size: 30px;
+    }
+    
+    #employer > p:nth-child(2), #worker >p:nth-child(2){
+        font-size: 20px;
+    }
+
+    #employer-img  , #worker-img{
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    #employer , #worker{
+        width: 50%;;
+        position: relative;
+    }
+
+    #benifit-paraghraph{
+        width: 50%;
+        padding: 20px 25% 20px;
+        font-size: 20px;
+    }
+
+    #benifit-content-container{
+        width: 60%;
+        margin: 0 20% 0;
+    }
+
+    #inner-container{
+        font-size: 18px;
+    }
+
+    #inner-container span{
+        font-size: 25px;
+    }
+
+    #benifit-prev{
+        left: 20%;
+    }
+    
+    #benifit-next{
+        right: 20%;
+    }
+
+    #work-from-home-text p:not(:first-child){
+        font-size: 17px;
+    }
+
+    #work-from-home-text p:first-child{
+        font-size: 17px;
+    }
+
+    #work-from-home-text p:not(:first-child) span{
+        font-size: 22px;
+    }
+
+    #work-from-home-text{
+        position: relative;
+        margin-left: 0%;
+        background-color: transparent;
+        padding:0;
+    }
+
+    #work-from-home-background{
+        width: 50%;
+    }
+
+    #write-review span{
+        font-size: 1rem;
+    }
+
+}
+
+@media(min-width:1200px){
+    #content-container #content-area #careers{
+        grid-template-areas: 
+                            'content-area-titles content-area-titles content-area-titles content-area-titles'
+                            'details-ctr-1 details-ctr-2 details-ctr-3 details-ctr-4' ;
+        padding: 0 5% 0;
+        width: 90%;
+    }
+
+    #collaborations-logos-1 img, #collaborations-logos-2 img{
+        height: 4%;
+        width: 4%;
+    }
+
+    #work-from-home-text p:not(:first-child){
+        font-size: 20px;
+    }
+
+    #work-from-home-text p:first-child{
+        font-size: 20px;
+    }
+
+    #work-from-home-text p:not(:first-child) span{
+        font-size: 25px;
+    }
+}

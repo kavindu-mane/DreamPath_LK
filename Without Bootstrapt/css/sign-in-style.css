@@ -1,0 +1,327 @@
+/* solution by Thakshila Dulanjani @group 7 */
+
+.theme-light{
+    --container-background:#ffffff;
+    --container-heading:#bc79ff;
+    --background-color:#dfdfdf;
+    --shadow-color:#53515168;
+    --font-color:#000000;
+    --border-color:#bc79ff;
+}
+
+.theme-dark{
+    --container-background:#2C394B;
+    --container-heading:#0b5269;
+    --background-color:#11283a;
+    --shadow-color:#27262678;
+    --font-color:#ffffff;
+    --border-color:#c4c4c4;
+}
+
+/* bosy style */
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
+}
+
+/* container */
+#sign-in-container{
+    height: auto;
+    background-color: var(--container-background);
+    border-radius: 10px;
+    display: block;
+    width: 25%;
+}
+
+/* heading */
+#heading{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 10px 0 15px;
+    width: 100%;
+    background-color: var(--container-heading);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+}
+
+/* form style */
+#sign-in-container form{
+    padding: 30px 15% 30px;
+}
+
+/* form field */
+form input{
+    width: 98%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 1% 0;
+    outline: none;
+    border: 2px solid var(--border-color);
+    box-shadow: -1px 2px 2px var(--shadow-color);
+    background-color: var(--container-background);
+    color: var(--font-color);
+
+}
+
+/* form field forcus */
+#sign-in-container input[type = password]:focus , #sign-in-container input[type = email]:focus{
+    border: 2px solid #4d65f1;
+}
+
+/* submit button */
+#sign-in-container input[type = submit]{
+    width: 30%;
+    height: 30px;
+    margin: 20px 35% 5px;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--container-heading) ;
+    border: none;
+    box-shadow: -2px 2px 2px var(--shadow-color);
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+}
+
+/* submit click */
+#sign-in-container input[type = submit]:active{
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+}
+
+/* labels */
+#sign-in-container label{
+    color: var(--font-color);
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* forget password text */
+#forget-password{
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 11px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* sign up style */
+#sign_up{
+    text-decoration: none;
+    color:#10bd6c;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* need account text */
+#need-account{
+    color:var(--font-color);
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* forget password hover */
+#forget-password:hover{
+    color: #10bd6c;
+}
+
+/* theme button */
+#theme{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* logo */
+#logo{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* copyright */
+#copyright{
+    position: absolute;
+    bottom: 5px;
+    color: #808080;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* form filed div */
+.field-div{
+    position: relative;
+}
+
+/* correct and error classes */
+.field-div img{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -25px;
+    top: 28px;
+    visibility:hidden;
+}
+
+/* password hide */
+.field-div .passwordHide{
+    right: 5px;
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* password hide */
+.field-div .passwordView{
+    right: 5px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+/* error id  */
+.error .errorID{
+    visibility: visible;
+}
+
+/* correct id */
+.correct .correctID{
+    visibility: visible;
+}
+
+/* error class input style */
+.error input{
+    border: 2px solid#ff3333;
+}
+
+/* correct input icon */
+.correct input{
+    border: 2px solid #38cc87;
+}
+
+/* error message text style */
+.field-div .error-text{
+    color: #ff3333;
+    font-size: 11px;
+    justify-content: left;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    visibility: hidden;
+}
+
+/* error message */
+.error .error-text{
+    visibility: visible;
+}
+
+/* hide password indecator for IE and chromium browsers */
+input::-ms-reveal,input::-ms-clear {
+    display: none;
+}
+
+#bkg{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.3;
+    visibility: hidden;
+}
+
+@media (max-width:600px){
+
+    #sign-in-container{
+        width: 80%;
+    }
+
+    #logo{
+        width:100px;
+        height: 30px;
+    }
+}
+
+@media (min-width:600px){
+
+    #sign-in-container{
+        width: 60%;
+    }
+
+    #logo{
+        width:150px;
+        height: 45px;
+    }
+}
+
+@media (min-width:768px){
+
+    #sign-in-container{
+        width: 40%;
+    }
+
+    #logo{
+        width:170px;
+        height: 50px;
+    }
+
+}
+
+@media (min-width:992px){
+
+    #sign-in-container{
+        width: 30%;
+    }
+
+    #logo{
+        width:200px;
+        height: 60px;
+    }
+
+    #sign-in-container{
+        transform: translateX(100%)
+    }
+
+    #bkg{
+        visibility: visible;
+    }
+
+}
+
+@media (min-width:1200px){
+    #sign-in-container{
+        width: 28%;
+    }
+
+}

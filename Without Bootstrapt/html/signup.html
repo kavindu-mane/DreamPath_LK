@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Lakruwan Jayasthissa @ group 7">
+    <meta name="revised" content="16/02/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/sign-up-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>sign-up - DreamPath.lk</title>
+
+</head>
+
+<body>
+
+    <!-- theme image -->
+    <div id="header">
+        <img src="../Images/moon.svg" alt="theme" id="theme">
+        <img src="../Images/DreamPath.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+    </div>
+
+    <div id="sign-up-container">
+        <div id="heading"> Create Account <span>worker</span></div>
+
+
+        <!-- get user need account type -->
+        <div id="ask-account-type">
+            <input type="radio" name="catogary" id="employer">
+            <label for="employer">Employer</label>
+            <input type="radio" name="catogary" id="worker">
+            <label for="worker">Worker</label>
+        </div>
+
+        <form action="../index.html"  id="worker-form" onsubmit="return false"> 
+            <!-- onsubmit="return submitFunc()" -->
+            <!--method="post"-->
+
+            <!-- worker divs -->
+            <div class="field-div" id="nameDiv">
+                <label for="name">Name:&ensp;</label><br>
+                <input type="text" name="name" id="name">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <p class="error-text">Error</p>
+            </div>
+
+            <div class="field-div" id="bdayDiv">
+                <label for="bday">Birthday:&ensp;</label><br>
+                <input type="date" name="bday" id="bday" min="1950-01-01">
+                <p class="error-text">Error</p>
+            </div>
+
+            <!-- employer divs -->
+            <div class="field-div" id="companyDiv">
+                <label for="company-name">Company / Institution name:&ensp;</label><br>
+                <input type="text" name="company-name" id="company-name">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <p class="error-text">Error</p>
+            </div>
+
+            <div class="field-div" id="regDiv">
+                <label for="buss-reg">Company / Bussiness reg. number:&ensp;</label><br>
+                <input type="text" name="buss-reg" id="buss-reg">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <p class="error-text">Error</p>
+            </div>
+
+            <!-- common divs -->
+            <div class="field-div">
+                <label for="email">Email:&ensp;</label><br>
+                <input type="email" name="email" id="email">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <p class="error-text">Error</p>
+            </div>
+
+            <div class="field-div">
+                <label for="password">Password:&ensp;</label><br>
+                <input type="password" name="password" id="password" maxlength="15">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <img src="../Images/eye-slash-solid.svg" alt="correct" class="passwordHide">
+                <img src="../Images/eye-solid.svg" alt="error" class="passwordView">
+                <p class="error-text">Error</p>
+            </div>
+
+            <div class="field-div">
+                <label for="passwordconform">Conform Password:&ensp;</label><br>
+                <input type="password" name="passwordconform" id="passwordconform" maxlength="15">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <img src="../Images/eye-slash-solid.svg" alt="correct" class="passwordHide">
+                <img src="../Images/eye-solid.svg" alt="error" class="passwordView">
+                <p class="error-text">Error</p>
+            </div>
+
+            <div id="password-content">
+                <div id="col1">
+                    <p id="upp"><span>&cross;</span> one uppercase charactor</p>
+                    <p id="lower"><span>&cross;</span> one lowecase charactor</p>
+                    <p id="min"><span>&cross;</span> minimum 8 charactors</p>
+                </div>
+
+                <div id="col2">
+                    <p id="special"><span>&cross;</span> one special character</p>
+                    <p id="number"><span>&cross;</span> one number</p>
+                    <p id="max" style="color: #38cc87;"><span>&cross;</span> maximum 15 charactors</p>
+                </div>
+            </div>
+
+            <input type="submit" value="Register" id="submit-btn">
+
+            <p id="term-accept">By clicking the "Register" button, you are creating an account,
+                and agree to DreamPath.lk' <strong>Terms of Service</strong> and <strong>Privacy Policy</strong></p>
+
+            <p id="have-account">Already have an account&ensp;<a href="../html/signin.html" id="sign_in">log in</a></p>
+        </form>
+
+    </div>
+
+    <div id="create-success">
+        <p>&check;</p>
+        <p>Account successfully created</p>
+    </div>
+
+    <!-- footer -->
+    <nav id="copyright">Privacy policy &ensp; | &ensp; Term of use &ensp; | &ensp; FAQ &ensp; <br> &copy; DreamPath.lk -
+        2022 &ensp; | &ensp; Solution by TEAM-7</nav>
+
+
+    <!-- this script use for loading with saved theme selection and form validate -->
+    <script src="../JavaScript/signup-script.js">
+
+    </script>
+
+</body>
+
+</html>

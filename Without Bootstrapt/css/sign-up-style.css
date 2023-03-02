@@ -1,0 +1,463 @@
+/* solution by Lakruwan Jayasthissa  @group 7 */
+
+.theme-light{
+    --container-background:#ffffff;
+    --container-heading:#bc79ff;
+    --background-color:#dfdfdf;
+    --shadow-color:#53515168;
+    --font-color:#000000;
+    --border-color:#bc79ff;
+}
+
+.theme-dark{
+    --container-background:#2C394B;
+    --container-heading:#0b5269;
+    --background-color:#11283a;
+    --shadow-color:#27262678;
+    --font-color:#ffffff;
+    --border-color:#c4c4c4;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* bosy style */
+body{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+/* container */
+#sign-up-container{
+    height: auto;
+    background-color: var(--container-background);
+    border-radius: 10px;
+    display: block;
+    box-shadow: -2px 3px 3px var(--shadow-color);
+    transition: 200ms;
+    -o-transition: 200ms; /*for opera*/
+    -moz-transition: 200ms; /*for firefox*/
+    -webkit-transition: 200ms; /*for safari*/
+    
+}
+
+/* heading */
+#heading{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 10px 0 15px;
+    width: 100%;
+    background-color: var(--container-heading);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+}
+
+/* ask account type */
+#ask-account-type{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    margin: 10px 0;
+}
+
+/* radio style */
+#ask-account-type input[type = radio]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border: 2px solid #38cc87;
+}
+
+/* checked */
+#ask-account-type input[type = radio]:checked{
+    border: 5px solid #38cc87;
+}
+
+/* worker margin add */
+#ask-account-type input[type = radio]:nth-last-child(2){
+    margin-left: 20%;
+}
+
+#companyDiv , #regDiv{
+    display: none;
+}
+
+/* heading span */
+#heading span{
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* form style */
+#sign-up-container form{
+    padding: 5px 15% 30px;
+}
+
+/* form field */
+form input{
+    width: 98%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 1% 0;
+    outline: none;
+    border: 2px solid var(--border-color);
+    box-shadow: -1px 2px 2px var(--shadow-color);
+    background-color: var(--container-background);
+    color: var(--font-color);
+
+}
+
+/* form field forcus */
+#sign-up-container input:focus {
+    border: 2px solid #4d65f1;
+}
+
+/* submit button */
+#sign-up-container #submit-btn{
+    width: 30%;
+    height: 30px;
+    margin: 5px 35% 5px;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--container-heading) ;
+    border: none;
+    box-shadow: -2px 2px 2px var(--shadow-color);
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+}
+
+/* submit click */
+#sign-up-container #submit-btn:active{
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+}
+
+/* labels */
+#sign-up-container label{
+    color: var(--font-color);
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* login style */
+#sign_in{
+    text-decoration: none;
+    color:#10bd6c;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* have account text */
+#have-account{
+    color:var(--font-color);
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* header style */
+#header{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    padding: 0;
+}
+/* theme button */
+#theme{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* logo */
+#logo{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* copyright */
+#copyright{
+    position: block;
+    color: gray;
+    font-size: 10px;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* form filed div */
+.field-div{
+    position: relative;
+}
+
+/* correct and error classes */
+.field-div img{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -25px;
+    top: 28px;
+    visibility:hidden;
+}
+
+/* password hide */
+.field-div .passwordHide{
+    right: 5px;
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* password hide */
+.field-div .passwordView{
+    right: 5px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+/* error id  */
+.error .errorID{
+    visibility: visible;
+}
+
+/* correct id */
+.correct .correctID{
+    visibility: visible;
+}
+
+/* error class input style */
+.error input{
+    border: 2px solid#ff3333;
+}
+
+/* correct input icon */
+.correct input{
+    border: 2px solid #38cc87;
+}
+
+/* error message text style */
+.field-div .error-text{
+    color: #ff3333;
+    font-size: 11px;
+    justify-content: left;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    visibility: hidden;
+}
+
+/* error message */
+.error .error-text{
+    visibility: visible;
+}
+
+/* password content style */
+#password-content{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff3333;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    transform: 1000ms;
+    -o-transform: 1000ms; /*for opera*/
+    -moz-transform: 1000ms; /*for firefox*/
+    -webkit-transform: 1000ms; /*for safari*/
+}
+
+#password-content p{
+    padding: 0 10px 0 0;
+    margin: 2px;
+}
+
+/* terms text */
+#term-accept{
+    font-size: 10px;
+    color: var(--font-color);
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+}
+
+/* webkit calender picker style for bday */
+::-webkit-calendar-picker-indicator{
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* hide password indecator for IE and chromium browsers */
+input::-ms-reveal,input::-ms-clear {
+        display: none;
+}
+
+/* successfully account create */
+#create-success{
+    width: 40%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    background-color: var(--background-color);
+    left: 30%;
+    border-radius: 10px;
+    box-shadow: -2px 2px 2px var(--shadow-color);
+    opacity: 1;
+    transition: 500ms;
+    -o-transition: 500ms; /*for opera*/
+    -moz-transition: 500ms; /*for firefox*/
+    -webkit-transition: 500ms; /*for safari*/
+    transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -moz-transform: scale(0);
+}
+
+/* successfully account create - check sign */
+#create-success p:first-child{
+    padding: 0;
+    margin: 10px auto 10px;
+    font-size: 50px;
+    color: #10bd6c;
+}
+
+/* successfully account create - text */
+#create-success p:nth-child(2){
+    padding: 10px auto 20px;
+    margin: 10px auto 20px;
+    font-size: 15px;
+    color: var(--font-color);
+    font-family: 'Kanit', sans-serif;
+}
+
+@media (max-width:600px){
+
+    #sign-up-container{
+        width: 90%;
+        margin: 20px 5% 20px;
+    }
+
+    #logo{
+        width:100px;
+        height: 30px;
+    }
+
+    #password-content{
+        display: block;
+        padding-left: 30%;
+        padding-right: auto; 
+    }
+
+    #password-content p{
+        padding: 0;
+        margin: 0;
+    }
+
+    #heading{
+        font-size: 15px;
+    }
+
+    #heading span{
+        font-size: 10px;
+    }
+
+    #worker-form input{
+        height: 25px;
+        font-size: 10px;
+    }
+
+    #worker-form label{
+        font-size: 10px;
+    }
+
+    .field-div img{
+        width: 12px;
+        height: 12px;
+        top: 27px;
+    }
+
+}
+
+@media (min-width:600px){
+
+    #sign-up-container{
+        width: 60%;
+        margin: 20px 20% 20px;
+    }
+
+    #logo{
+        width:150px;
+        height: 45px;
+    }
+}
+
+@media (min-width:768px){
+
+    #sign-up-container{
+        width: 50%;
+        margin: 20px 25% 20px;
+    }
+
+    #logo{
+        width:170px;
+        height: 50px;
+    }
+
+}
+
+@media (min-width:992px){
+
+    #sign-up-container{
+        width: 35%;
+        margin: 20px 32.5% 20px;
+    }
+
+    #logo{
+        width:200px;
+        height: 60px;
+    }
+
+    #create-success{
+        width: 25%;
+        left: 37.5%;
+    }
+
+}
+
+@media (min-width:1200px){
+    #sign-up-container{
+        width: 30%;
+        margin: 20px 35% 20px;
+    }
+}

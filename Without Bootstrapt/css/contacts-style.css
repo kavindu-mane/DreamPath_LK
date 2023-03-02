@@ -1,0 +1,252 @@
+/* solution by Fathima Saliha @group 7 */
+
+/* light theme */
+.theme-light{
+    --background-color:#f5f5f5;
+    --header-color:#ffffff;
+    --navigation-small:#ffffff;
+    --font-color:#000000;
+    --button-color:#089755;
+    /* --navigation-color:#050242; */
+    --hover-color:#38cc87;
+    --text-hover-color:#dbdbdb;
+    --form-background: #ffffff;
+    --form-border:#3842c4;
+    --shadow-color:#53515168;
+    --textarea-color:#e8e2f7;
+}
+
+/* dark theme */
+.theme-dark{
+    --background-color:#2C394B;
+    --header-color:#11283a;
+    --navigation-small:#334756;
+    --font-color:#ffffff;
+    /* --navigation-color:#050242; */
+    --button-color:#089755;
+    --hover-color:#38cc87;
+    --text-hover-color:#515f69;
+    --form-background: #455768;
+    --form-border:#2a3942;
+    --shadow-color:#27262678;
+    --textarea-color:#325170;
+}
+
+/* navigation style */
+#navbar{
+    background-color:var(--header-color);
+    box-shadow: 0 -2px 5px 2px var(--shadow-color);
+}
+
+/* button home color change */
+#navbar #btn-contacts , #small-btn-contacts{
+    background-color: #089755;
+}
+
+/* footer style */
+#footer iframe{
+    width: 100%;
+}
+
+/* #container{
+    padding-top: 100px;
+} */
+
+#container p {
+    width: 70%;
+    padding:0 15% 0;
+    text-align: center;
+    color: var(--font-color);
+    font-family: 'kanit' , sans-serif;
+}
+
+#container p:first-child{
+    color: #38cc87;
+    width: 90%;
+    padding:0 5% 0;
+}
+
+#form-div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: var(--header-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px var(--shadow-color);
+}
+
+form label{
+    text-align: right;
+    color: var(--font-color);
+    font-family: 'kanit' , sans-serif;
+    padding-left: 5px;
+}
+
+form input[type = text] , form input[type = email] , form textarea{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 0;
+    border: 1px solid var(--form-border);
+    height: 30px;
+    width: 100%;
+    outline: none;
+    background-color: var(--form-background);
+    color: var(--font-color);
+    box-shadow: -2px 2px 5px var(--shadow-color);
+    margin-top: 3px;
+}
+
+form textarea{
+    height: auto;
+    background-color: var(--textarea-color);
+    resize: vertical;
+}
+
+form input[type = text]:focus , form input[type = email]:focus , form textarea:focus{
+    border: 1px solid #38cc87;
+}
+
+form input[type = submit] , form input[type = reset]{
+    border-radius: 5px;
+    background-color: #d67322;
+    color: #ffffff;
+    text-align: center;
+    width: 80px;
+    padding: 5px 20px;
+    border: none;
+    margin:0 5px 20px;
+    transition: all 1s;
+    -o-transition:all 1s ; /* for opera*/
+    -webkit-transition: all 1s; /* for safari*/
+    -moz-transition: all 1s; /* for firefox*/
+    box-shadow: -2px 2px 5px var(--shadow-color);
+    cursor: pointer;
+}
+
+form input[type = submit]:hover , form input[type = reset]:hover{
+    background-color: #38cc87;
+}
+
+form input[type = submit]:active , form input[type = reset]:active{
+     transform: scale(0.7);
+     -o-transform: scale(0.8) ;
+     -moz-transform: scale(0.8);
+     -webkit-transform: scale(0.7);
+}
+
+
+/* media quaries */
+@media (max-width:600px){
+    #footer iframe{
+        height: 925px;
+    }
+
+    form label{
+        font-size: 0.6rem;
+    }
+
+    #container p{
+        font-size: 0.7rem;
+    }
+
+    #container p:first-child{
+        font-size: 0.9rem;
+    }
+
+    form{
+        width: 88%;
+    }
+}
+
+@media (max-width:460px){ /*these values are checked values for devices*/
+    #footer iframe{
+        height: 935px;
+    }
+   
+}
+
+@media (max-width:308px){ /*these values are checked values for devices*/
+    #footer iframe{
+        height: 950px;
+    }
+}
+
+@media (min-width:600px){
+    #footer iframe{
+        height: 925px;
+    }
+
+    form label{
+        font-size: 0.7rem;
+    }
+
+    #container p{
+        font-size: 0.8rem;
+    }
+
+    #container p:first-child{
+        font-size: 1rem;
+    }
+
+    form{
+        width: 70%;
+    }
+
+}
+
+@media (min-width:786px){
+    #footer iframe{
+        height: 440px;
+    }
+
+    form label{
+        font-size: 0.8rem;
+    }
+
+    #container p{
+        font-size: 0.9rem;
+    }
+
+    #container p:first-child{
+        font-size: 1.1;
+    }
+
+    form{
+        width: 50%;
+    }
+}
+
+@media (min-width:992px){
+    #footer iframe{
+        height: 490px;
+    }
+
+    #container p{
+        font-size: 1rem;
+    }
+
+    #container p:first-child{
+        font-size: 1.2rem;
+    }
+
+    form label{
+        font-size: 0.9rem;
+    }
+
+    form , #container p{
+        width: 40%;
+    }
+
+    #container p{
+        width: 40%;
+        padding:0 30% 0;
+    }
+
+}

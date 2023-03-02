@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Nimasha Weeragama @ group 7">
+    <meta name="revised" content="24/01/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/feed-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>Feed - DreamPath.lk</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav id="navbar">
+
+        <!-- logo image -->
+        <img src="../Images/DreamPath-white.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+
+        <!-- search icon and theme change icon -->
+        <img src="../Images/search.svg" alt="theme" id="search">
+        <img src="../Images/sun.svg" alt="search" id="theme">
+
+        <!-- include default theme js file -->
+        <script src="../JavaScript/default-script.js"></script>
+
+        <!-- this script use for loading with saved theme selection -->
+        <script>
+            localStorage.getItem("theme") == 'theme-dark' ? themeChange('theme-light') : themeChange('theme-dark');
+        </script>
+
+        <!-- navigation bar buttons -->
+        <button id="btn-home" onclick="location.href='../index.html'">Home</button>
+        <button id="btn-services" onclick="location.href='../html/services.html'">Services</button>
+        <button id="btn-contacts" onclick="location.href='../html/contacts.html'">Contact</button>
+        <button id="btn-about" onclick="location.href='../html/about.html'">About</button>
+        <button id="btn-more">More <span style="font-size: 12px; margin-bottom:5px">&#11206;</span></button>
+
+        <!-- sign in and sign up button -->
+        <button id="sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+
+        <!-- navigation bar menu button for small displays -->
+        <button id="btn-menu"> <img src="../Images/menu.svg" alt="menu"> </button>
+
+    </nav>
+
+    <!-- navigation dropdown for small display divices -->
+    <div id="nav-for-small-divice">
+        <div id="small-btn-home" onclick="location.href='../index.html'">Home</div>
+        <div id="small-btn-services" onclick="location.href='../html/services.html'">Services</div>
+        <div id="small-btn-contacts" onclick="location.href='../html/contacts.html'">Contact</div>
+        <div id="small-btn-about" onclick="location.href='../html/about.html'">About</div>
+        <div id="small-btn-more">More <span style="font-size: 10px;">&#11206;</span></div>
+
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/faq.html'">FAQ</div>
+
+        <button id="small-sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="small-sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+    </div>
+
+    <!-- more dropdown -->
+    <div id="more-dropdown">
+
+        <div onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div onclick="location.href='../html/faq.html'">FAQ</div>
+
+    </div>
+
+    <!-- search box -->
+    <div id="search-box">
+        <input type="text" name="search" id="search-key" placeholder="Search by skill , job title">
+        <button><i class="fa-solid fa-magnifying-glass" style="color:#38cc87;"></i></button>
+    </div>
+
+    <!-- content area start -->
+
+    <!-- cative path title -->
+    <div id="active-path">
+        <p class="font-default"><small>Home &#62; Feed</small></p>
+    </div>
+
+    <!-- post a job button -->
+    <div id="post-btn-div">
+        <button id="post-job" class="buttons">Post a Job</button>
+    </div>
+
+    <script>
+        setInterval(function () {
+            let feed_btn = document.getElementById("post-job");
+            feed_btn.setAttribute("style", "transform:scale(1.1); -o-transform:scale(1.1) ; -moz-transform:scale(1.1); -webkit-transform:scale(1.1);");
+            setTimeout(function () {
+                feed_btn.setAttribute("style", "transform:scale(1);-o-transform:scale(1) ; -moz-transform:scale(1); -webkit-transform:scale(1);");
+            }, 500);
+
+        }, 1500);
+    </script>
+    <!-- feedback redirection button animation -->
+
+    <!-- categories title -->
+    <div id="resend-jobs" class="font-default">Recent Jobs</div>
+
+    <!-- recent ads -->
+    <div id="recent-ad">
+
+        <div class="ads">
+            <p class="title font-default">Associate Engineer Apprenticeship-Java Jobs At EBuilder In Colombo , Sri Lanka
+            </p>
+            <p class="font-default">Posted: 3 hours ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT -Software
+                Associate Engineer Apprenticeship-Java
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Angular Node.JS Developer Jobs At LankaSolution Enterprise (Pvt) Ltd In
+                Colombo , Sri Lanka </p>
+            <p class="font-default">Posted: 3 hours ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT -Software, IT-Development,
+                IT-Professionals Angular-Node.JS-Developer
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">DevOps Engineer Jobs At LankaSolution Enterprise (Pvt) Ltd In Colombo , Sri
+                Lanka</p>
+            <p class="font-default">Posted: 5 hours ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT-Professionals
+                DevOps Engineer
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Internship At LankaSolution Enterprise (Pvt) Ltd In Colombo , Sri Lanka</p>
+            <p class="font-default">Posted: 10 hours ago</p>
+            <p class="font-default">Specialism: Academic Opportunities, Computer/Information Technology, Internship, IT
+                -Software, IT-Development, IT-Professionals, Java Developer, Software Developer, Web Services</p>
+            <p class="font-default">Vacancy Type: INTERNSHIP</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Quality Assurance Engineer Jobs At LankaSolution Enterprise (Pvt) Ltd In
+                Colombo , Sri Lanka</p>
+            <p class="font-default">Posted: 4 days ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT-Professionals</p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Tech Lead Jobs At LankaSolution Enterprise (Pvt) Ltd In Colombo , Sri Lanka
+            </p>
+            <p class="font-default">Posted: 1 weeks ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT -Software, IT-Professionals</p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Senior-Software-Engineer-Java Jobs At LankaSolution Enterprise (Pvt) Ltd In
+                Colombo , Sri Lanka</p>
+            <p class="font-default">Posted: 2 weeks ago</p>
+            <p class="font-default">pecialism: Computer/Information Technology, IT -Software, IT-Professionals
+                Senior-Software-Engineer-Java
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">React.JS-React-Native-Developer Jobs At LankaSolution Enterprise (Pvt) Ltd In
+                Colombo , Sri Lanka</p>
+            <p class="font-default">Posted: 2 weeks ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT -Software, IT-Professionals
+                React.JS-React-Native-Develope
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Business Analysts Jobs At LankaSolution Enterprise (Pvt) Ltd In Colombo , Sri
+                Lanka</p>
+            <p class="font-default">Posted: 3 weeks ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT-Professionals
+                Business Analysts
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Software Engineer/Senior Software Engineer (Java Development) Jobs At
+                LankaSolution Enterprise (Pvt) Ltd In Colombo , Sri Lanka</p>
+            <p class="font-default">Posted: 3 weeks ago</p>
+            <p class="font-default">Specialism: Computer/Information Technology, IT -Software, IT-Development,
+                IT-Professionals, Java Developer, Software Developer
+                Software Engineer/Senior Software Engineer (Java Development)</p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Cloud Delivery Engineer Jobs At IFS, Indianapolis, USA</p>
+            <p class="font-default">Posted: 3 weeks ago</p>
+            <p class="font-default">Specialism: IT-Network/Sys/DB Admin
+                Cloud Delivery Engineer Company Description At IFS you will work in a growing, global enterprise
+                software company
+            </p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Intern - Group Billing Operations Jobs At Dialog Axiata PLC In Colombo, Sri
+                Lanka</p>
+            <p class="font-default">Posted: 3 weeks ago</p>
+            <p class="font-default">Specialism: Accounting/Finance</p>
+            <p class="font-default">Vacancy Type: INTERNSHIP</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Software Engineer & Sr. SWE, Machine Learning Platforms (Multiple
+                Opportunities) Jobs At Nielsen,Emeryville, California, USA</p>
+            <p class="font-default">Posted: 3 weeks ago</p>
+            <p class="font-default">Specialism: IT -Software</p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Intern - Project Management Jobs At Dialog Axiata PLC In Colombo, Sri Lanka
+            </p>
+            <p class="font-default">Posted: 4 weeks ago</p>
+            <p class="font-default">Specialism: Project Management Description Managing JIRA scrum and Kanban boards.
+                Facilitating the grooming of product backlogs</p>
+            <p class="font-default">Vacancy Type: INTERNSHIP</p>
+        </div>
+        <div class="ads">
+            <p class="title font-default">Cybersecurity Analyst Jobs At Nielsen,Oldsmar, Florida,USA</p>
+            <p class="font-default">Posted: 4 weeks ago</p>
+            <p class="font-default">Specialism: IT-Network/Sys/DB Admin</p>
+            <p class="font-default">Vacancy Type: FULL-TIME</p>
+        </div>
+
+    </div>
+
+    <!-- categories title -->
+    <div id="categories" class="font-default">Categories</div>
+
+    <div id="category-area">
+
+        <div class="font-default color-blue">Accountancy & Finance&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Administration / Secretaria&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Agriculture&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Apparel&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Architecture&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Automobile&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Banking and Financial Services&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Building & Construction&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Business Management&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Customer Service / Call Center&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Delivery / Driving / Transport&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Education&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Education / Higher Education&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Electronics / Electrical&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Engineering / Manufacturing&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">FMCG/ Food Industry&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Handyman&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Hospital/ Nursing/ Healthcare&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Hotel/ Hospitality/ Leisure&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Human Resources / Recruitment&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Insurance&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Interior Design&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">Internship / Undergraduate&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+        <div class="font-default color-blue">IT Hardware & Networkingt&ensp;&ensp;&ensp;<i
+                class="fa-solid fa-chevron-right text-success spans"></i></div>
+
+    </div>
+
+    <!-- content area end -->
+
+    <!-- footer class div -->
+    <div id="footer">
+        <iframe src="../html/footer.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- add chat icon to web page -->
+    <div id="chat-btn" onclick="location.href='contacts.html'">
+        <img src="../Images/chat.svg" alt="chat">
+    </div>
+
+    <!-- create back to top div -->
+    <div id="back-to-top">&Lt;</div>
+
+    <!-- scroll function script -->
+    <script>
+        document.querySelector("#back-to-top").addEventListener('click', function () {
+
+            document.body.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- add dropdown JavaScript -->
+    <script src="../JavaScript/dropdowns.js"></script>
+
+</body>
+
+</html>

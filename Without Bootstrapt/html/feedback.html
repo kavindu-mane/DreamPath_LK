@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Nimesha Madhuwanthi @ group 7">
+    <meta name="revised" content="18/02/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/feedback-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>Feedback - DreamPath.lk</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav id="navbar">
+
+        <!-- logo image -->
+        <img src="../Images/DreamPath-white.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+
+        <!-- search icon and theme change icon -->
+        <img src="../Images/search.svg" alt="theme" id="search">
+        <img src="../Images/sun.svg" alt="search" id="theme">
+
+        <!-- include default theme js file -->
+        <script src="../JavaScript/default-script.js"></script>
+
+        <!-- this script use for loading with saved theme selection -->
+        <script>
+            localStorage.getItem("theme") == 'theme-dark' ? themeChange('theme-light') : themeChange('theme-dark');
+        </script>
+
+        <!-- navigation bar buttons -->
+        <button id="btn-home" onclick="location.href='../index.html'">Home</button>
+        <button id="btn-services" onclick="location.href='../html/services.html'">Services</button>
+        <button id="btn-contacts" onclick="location.href='../html/contacts.html'">Contact</button>
+        <button id="btn-about" onclick="location.href='../html/about.html'">About</button>
+        <button id="btn-more">More <span style="font-size: 12px; margin-bottom:5px">&#11206;</span></button>
+
+        <!-- sign in and sign up button -->
+        <button id="sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+
+        <!-- navigation bar menu button for small displays -->
+        <button id="btn-menu"> <img src="../Images/menu.svg" alt="menu"> </button>
+
+    </nav>
+
+    <!-- navigation dropdown for small display divices -->
+    <div id="nav-for-small-divice">
+        <div id="small-btn-home" onclick="location.href='../index.html'">Home</div>
+        <div id="small-btn-services" onclick="location.href='../html/services.html'">Services</div>
+        <div id="small-btn-contacts" onclick="location.href='../html/contacts.html'">Contact</div>
+        <div id="small-btn-about" onclick="location.href='../html/about.html'">About</div>
+        <div id="small-btn-more">More <span style="font-size: 10px;">&#11206;</span></div>
+
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/faq.html'">FAQ</div>
+
+        <button id="small-sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="small-sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+    </div>
+
+    <!-- more dropdown -->
+    <div id="more-dropdown">
+
+        <div onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div onclick="location.href='../html/faq.html'">FAQ</div>
+
+    </div>
+
+    <!-- search box -->
+    <div id="search-box">
+        <input type="text" name="search" id="search-key" placeholder="Search by skill , job title">
+        <button><i class="fa-solid fa-magnifying-glass" style="color:#38cc87;"></i></button>
+    </div>
+
+    <!-- content area start -->
+
+    <div id="active-path">
+        <p class="font-default"><small>Home &#62; Feedback</small></p>
+    </div>
+
+    <div class="done font-default">Write a Review</div>
+
+    <div id="post-feedback">
+
+        <form action="../index.html" onsubmit="return false" method="post">
+            <label for="name">Name</label> <br>
+            <input type="text" name="name" id="name" class="inputs" required> <br>
+
+            <label for="position">Position</label> <br>
+            <input type="text" name="position" id="position" class="inputs" required> <br>
+
+            <label for="company">Company</label> <br>
+            <input type="text" name="company" id="company" class="inputs" required> <br>
+
+            <label for="feedback-msg">Feedback</label> <br>
+            <textarea name="feedback" id="feedback-msg" cols="30" rows="10" required></textarea><br>
+
+            <input type="submit" value="Submit" class="btns sign-btns" id="submit">
+            <input type="reset" value="Reset" class="btns sign-btns">
+        </form>
+
+        <script>
+            let fbMsgID = document.getElementById("feedback-msg");
+            fbMsgID.oninput = function () {
+                this.style.height = "";
+                this.style.height = this.scrollHeight + "px";
+            }
+        </script>
+        <!-- for auto height increase -->
+
+    </div>
+
+    <div id="recent-review" class="font-default">Recent Reviews</div>
+
+    <div id="view-feedback">
+
+        <div class="box-bkg">
+            <p class="review font-default">It's well worth the small fee for the quality of jobs listed. I never thought
+                I would, but I found the perfect job within a month with Dream path</p>
+            <p class="name font-default color-gray">-A.J.Fernando-</p>
+            <p class="position font-default color-gray">Architecturer</p>
+            <p class="company font-default color-gray">RJ Company and private Limited</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">Dream path helped me find a remote job with fantastic benefits -- and helped
+                me eliminate a 4 hour/day commute!</p>
+            <p class="name font-default color-gray">-W.W.Rodrigu-</p>
+            <p class="position font-default color-gray">Execative Engineer</p>
+            <p class="company font-default color-gray">Sunken constructions (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">I loved using Dream path I found a great remote job and am so grateful!</p>
+            <p class="name font-default color-gray">-R.M.Rathnayake-</p>
+            <p class="position font-default color-gray">Chemical & Process Engineer</p>
+            <p class="company font-default color-gray">Heycarb Agro (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">I found a job with higher pay and better benefits! My only regret is not
+                becoming a Dream path member the first time I visited the site.</p>
+            <p class="name font-default color-gray">-F.Faroos-</p>
+            <p class="position font-default color-gray">Designer</p>
+            <p class="company font-default color-gray">Matrix (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">Dream path is the best job resource out there! It is so user-friendly and has
+                high-quality job listings.</p>
+            <p class="name font-default color-gray">-A.K.Aththanayaka-</p>
+            <p class="position font-default color-gray">Teacher</p>
+            <p class="company font-default color-gray">Sussex Collage</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">This is the second time I used, Dream path and found the perfect job. Thank
+                you!!!!</p>
+            <p class="name font-default color-gray">-T.H.Uvindu Perera-</p>
+            <p class="position font-default color-gray">Assistant Engineer</p>
+            <p class="company font-default color-gray">Heyleys (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default"> I finally decided to give Dream path a try despite the fee, and in two weeks
+                I've gotten five interviews! Wow, thank you!</p>
+            <p class="name font-default color-gray">-T.M.Thanura Ruvin-</p>
+            <p class="position font-default color-gray">Manager</p>
+            <p class="company font-default color-gray">Ceylon ERT (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">I wish I had found your site sooner! Everyone needs to know about Dream path
+                I found a job I love in less than a month. WELL worth the subscription fee.</p>
+            <p class="name font-default color-gray">-G.H.T.Thennakoon-</p>
+            <p class="position font-default color-gray">Site Engineer</p>
+            <p class="company font-default color-gray">Sunken Constructions (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">You guys are awesome! Keep changing the world, one remote job at a time. You
+                truly helped my life and opened new doors I didn't know existed.</p>
+            <p class="name font-default color-gray">R.T.Cooray</p>
+            <p class="position font-default color-gray">Quality Assurance Engineer</p>
+            <p class="company font-default color-gray">LankaSolution Enterprise (Pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">I loved everything about Dream path t! This flexible, work from home job has
+                already made my life better!</p>
+            <p class="name font-default color-gray">O.P.K.Marapana</p>
+            <p class="position font-default color-gray">Business Analysts</p>
+            <p class="company font-default color-gray">LankaSolution Enterprise (Pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">You are amazing! Dream path gave me the resources to find the best job I've
+                ever had.</p>
+            <p class="name font-default color-gray">T.U.Geeganage</p>
+            <p class="position font-default color-gray">Cloud Delivery Engineer</p>
+            <p class="company font-default color-gray">Object (pvt) Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">It's well worth the small fee for the quality of jobs listed. I never thought
+                I would, but I found the perfect job within a month with Dream path!</p>
+            <p class="name font-default color-gray">J.Silva</p>
+            <p class="position font-default color-gray">Senior Software Engineer (Java Development)</p>
+            <p class="company font-default color-gray">LankaSolution Enterprise(pvt)Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">KEEP UP THE GOOD WORK!!! In two weeks, I found a job... I could not believe
+                it, but it happened. The pay, job, benefits, and working at home are all awesome!</p>
+            <p class="name font-default color-gray">R.Madumadawa</p>
+            <p class="position font-default color-gray">Web Developer</p>
+            <p class="company font-default color-gray">Vijaya grapics Pvt Ltd</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">Thank you for the opportunity to find a great job! My local job market is
+                very limited, and I found a great job I enjoy doing.</p>
+            <p class="name font-default color-gray">Y.T.Rajapakshe</p>
+            <p class="position font-default color-gray">Analysts</p>
+            <p class="company font-default color-gray">Indu lankaSolutions Enterprise</p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">I have found two wonderful jobs through Dream path!</p>
+            <p class="name font-default color-gray">E.T.U.Edirisinghe</p>
+            <p class="position font-default color-gray">Teacher</p>
+            <p class="company font-default color-gray">Royal International </p>
+        </div>
+        <div class="box-bkg">
+            <p class="review font-default">I am so grateful to Dream path. It's truly a company that helps people change
+                their careers and their lives.</p>
+            <p class="name font-default color-gray">T.G.H.Herath</p>
+            <p class="position font-default color-gray">Software Engineer</p>
+            <p class="company font-default color-gray">RJ Enterprises (pvt)Ltd</p>
+        </div>
+
+    </div>
+
+    <div id="success-msg">
+        <p id="cross">&cross;</p>
+        <p class="done"><span id="check-span" style="color: #38cc87; font-weight: 700;">&check;</span> <br> Review
+            Posted.</p>
+    </div>
+
+    <!-- content area end -->
+
+    <!-- footer class div -->
+    <div id="footer">
+        <iframe src="../html/footer.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- add chat icon to web page -->
+    <div id="chat-btn" onclick="location.href='contacts.html'">
+        <img src="../Images/chat.svg" alt="chat">
+    </div>
+
+    <!-- create back to top div -->
+    <div id="back-to-top">&Lt;</div>
+
+    <!-- scroll function script -->
+    <script>
+        document.querySelector("#back-to-top").addEventListener('click', function () {
+
+            document.body.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- add dropdown JavaScript -->
+    <script src="../JavaScript/dropdowns.js"></script>
+    <script src="../JavaScript/feedback.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,708 @@
+/* solution by kavindu manahara @group 7 */
+
+/* light theme */
+.theme-light{
+    --background-color:#dfdfdf;
+    --header-color:#ffffff;
+    --navigation-small:#ffffff;
+    --font-color:#000000;
+    --button-color:#089755;
+    /* --navigation-color:#050242; */
+    --hover-color:#38cc87;
+    --text-hover-color:#dbdbdb;
+    --shadow-color:#53515168;
+}
+
+/* 
+z-index list 
+
+0 - default and more dropdown before the button clicking
+1 - main container
+2 - navbar for small device
+3 - navbar
+4 - more dropdown
+5 - chat button
+6 - back to top
+
+*/
+
+/* dark theme */
+.theme-dark{
+    --background-color:#2C394B;
+    --header-color:#11283a;
+    --navigation-small:#334756;
+    --font-color:#ffffff;
+    /* --navigation-color:#050242; */
+    --button-color:#089755;
+    --hover-color:#38cc87;
+    --text-hover-color:#515f69;
+    --shadow-color:#27262678;
+}
+
+/* body tag style */
+body{
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden ;
+    margin: 0;
+    padding: 0;
+}
+
+/* header styles start */
+/* navbar style - navigation bar */
+#navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    z-index: 3;
+    transition: 500ms;
+    -o-transition: 500ms; /*for opera*/
+    -moz-transition: 500ms; /*for firefox*/
+    -webkit-transition: 500ms; /*for safari*/
+    /* background-color: transparent;
+    height: 80px; 
+    box-shadow: none;*/
+}
+
+/* website logo style */
+#navbar #logo{
+    /* height: 30px;
+    width: 150px;
+    margin-top: 10px; */
+    margin-right: auto;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+/* search and theme change images */
+#theme , #search{
+    /* height: 18px;
+    width: 18px;
+    margin-top: 30px; */
+    margin-right: 20px;
+}
+
+/* navigation menu button - small displays only */
+#navbar #btn-menu{
+    margin: 0%;
+    border-radius: 0;
+    height: 100%;
+    background-color: #1f41b1;
+    width: 50px;
+    /* display: none; */
+}
+
+/* theme and search images hovers */
+#theme:hover , #search:hover{
+    cursor: pointer;
+}
+
+/* navigation button styles */
+#navbar [id*= "btn-"]{
+    background-color:#1a242e ;
+    border: none;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    border-radius: 25px;
+    height:24px;
+    padding: 0 15px 0;
+    margin-left: 10px;
+    /* margin: 28px 0.8% 28px ; */
+
+}
+
+/* sign in and sign up buttons styles */
+.sign-btns{
+    background-color:#d67322 ;
+    border: none;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    padding: 0 15px 3px;
+    margin: 27px 20px 23px ;
+    border-radius: 10px;
+    height: 30px;
+    /* #navbar #sign-in , #navbar #sign-up , #small-sign-in , #small-sign-up */
+}
+
+/* sign in button style - for set margin */
+#navbar #sign-in , #small-sign-in{
+    margin-right:0;
+}
+
+/* navigation button hovers */
+#navbar button:hover ,.sign-btns:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+    /* #sign-in:hover , #navbar #sign-up:hover ,  #small-sign-in:hover , #small-sign-up:hover */
+}
+
+/* transform styles for navigation buttons (without menu button)*/
+#navbar button:not(:last-child):active{
+    transform: translateY(3px);
+    -o-transform: translateY(3px); /*opera*/
+    -ms-transform: translateY(3px); /*EI 9*/
+    -moz-transform: translateY(3px); /*firefox*/
+    -webkit-transform: translateY(3px); /*safari*/
+    background-color: var(--hover-color);
+}
+/* header styles end */
+
+/* navigation for small devices */
+#nav-for-small-divice{
+    z-index: 2;
+    height: 100%;
+    min-height: 500px;
+    right: 0;
+    background-color: var(--navigation-small);
+    position: fixed;
+    box-shadow:-5px 10px 10px #08080814;
+    transition: 500ms;
+    -o-transition: 500ms; /*for opera*/
+    -moz-transition: 500ms; /*for firefox*/
+    -webkit-transition: 500ms; /*for safari*/
+}
+
+/* small navigation div style */
+#nav-for-small-divice div{
+    /* padding-left:  10px;
+    padding-right: 150px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    color: var(--font-color);
+    font-weight: 100;
+    border-bottom: 0.5px solid gray;
+}
+
+/* small navigation bar dropdown */
+#nav-for-small-divice .small-dropdown-itm{
+    display: none;
+    transition: 500ms;
+    -o-transition: 500ms; /*for opera*/
+    -moz-transition: 500ms; /*for firefox*/
+    -webkit-transition: 500ms; /*for safari*/
+}
+
+/* small navigation hover style */
+#nav-for-small-divice div:hover , #nav-for-small-divice div:active{
+    background-color: var(--text-hover-color);
+    cursor: pointer;
+}
+
+/* more dropdown styles */
+#more-dropdown{
+    z-index: -1;
+    height: auto;
+    opacity: 0;
+    background-color: #009933;
+    /* position: absolute; */
+    top:200px;
+    position: fixed;
+    right: 150px;
+    box-shadow:-5px 10px 10px #08080814;
+    transition: 500ms;
+    -o-transition: 500ms; /*for opera*/
+    -moz-transition: 500ms; /*for firefox*/
+    -webkit-transition: 500ms; /*for safari*/
+    
+
+}
+
+/* more dropdown rows style */
+#more-dropdown div{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    margin: 0;
+    padding: 10px 30px 10px;
+    border-top: 1px solid black;
+    
+}
+
+/* more dropdown hover style */
+#more-dropdown div:hover , #more-dropdown div:active{
+    cursor: pointer;
+    background-color: #006622;
+
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #089755;  
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #38cc87;
+}
+/* end of the custom scrollbar */
+
+/* start chat button */
+#chat-btn{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    bottom: 60px;
+    right: -500px;
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+}
+
+#chat-btn:hover{
+    cursor: pointer;
+}
+
+#chat-btn p{
+    background-color: #adadff;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 30px 5px;
+    margin-right: -5px;
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+}
+
+#chat-btn img{
+    width: 35px;
+    height: 35px;
+    /* margin-bottom: -15px; */
+}
+/* end chat button */
+
+/* back to top button start */
+#back-to-top{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 8px;
+    z-index: 6;
+    bottom: -50px;
+    right: 20px;
+    background-color: #099b4b;
+    color: #ffffff;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    -o-transform: rotate(90deg); /*for opera*/
+    -ms-transform: rotate(90deg); /*for IE9*/
+    -moz-transform: rotate(90deg); /*for firefox*/
+    -webkit-transform: rotate(90deg); /*for safari*/
+    transition: 1000ms;
+    -o-transition: 1000ms; /*for opera*/
+    -moz-transition: 1000ms; /*for firefox*/
+    -webkit-transition: 1000ms; /*for safari*/
+    cursor: pointer;
+}
+
+/* back to top button end */
+
+/* search box container */
+#search-box{
+    width: 100%;
+    padding: 80px 0 0;
+    display:flex;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    justify-content: center;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -o-transform: scale(0);
+    -moz-transform: scale(0);
+}
+
+/* searchbox input */
+#search-key{
+    height: 30px;
+    min-width: 250px;
+    padding: 0;
+    padding-left: 5px;
+    width: 40%;
+    max-width: 600px;
+    outline: none;
+    font-size: 0.8rem;
+    border: 1px solid gray;
+    /* border: none; */
+    border-radius: 5px;
+    font-family: 'Kanit' , sans-serif;
+}
+
+/* search button */
+#search-box button{
+    width: 30px;
+    height: 30px;
+    background-color: #089755;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* footer shadow */
+#footer{
+    box-shadow: 0 3px 5px 5px var(--shadow-color);
+}
+
+
+/* common display breakpointes */
+@media (max-width:576px){
+    /* navigation bar theme */
+    #navbar{
+        background-color: var(--header-color);
+        height: 50px;
+        box-shadow:0 8px 8px #08080814;
+    }
+
+    /* navigation bar logo */
+    #navbar #logo{
+        height: 25px;
+        width: 125px;
+        margin-top: 12px;
+    }
+
+    /* theme switch and search button */
+    #navbar #theme , #search{
+        width: 12px;
+        height: 12px;
+        margin-top: 19px
+    }
+
+    /* menu button image styles */
+    #navbar #btn-menu img{
+        width: 12px;
+        height: 12px;
+    }
+
+    /* navigation buttons visibility */
+    #navbar button{
+        display: none;
+    }
+
+    /* menu button visibility */
+    #navbar #btn-menu{
+        display: block;
+    }
+
+    /* right side navigation bar style */
+    #nav-for-small-divice div{
+        padding-left:  10px;
+        padding-right: 150px;
+        font-size: 10px;
+    }
+
+    /* right side navigation bar container */
+    #nav-for-small-divice {
+       top: 50px;
+       right: -320px;
+    
+    }
+
+    /* sign in class style */
+    .sign-btns{
+        font-size: 10px;
+        height: 20px;
+    }
+
+    /* more dropdown visibility */
+    #more-dropdown{
+        display: none;
+    } 
+
+    #nav-for-small-divice .small-dropdown-itm{
+        font-size: 8px;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    #search-key{
+        height: 25px;
+        font-size: 0.7rem;
+    }
+
+    #search-box button{
+        width: 25px;
+        height: 25px;
+    }
+
+    #search-box{
+        padding-top: 55px;
+    }
+
+}
+
+@media (min-width:576px){
+    /* navigation bar theme */
+    #navbar{
+        height: 70px;
+        background-color: var(--header-color);
+        box-shadow:0 8px 8px #08080814;
+    }
+
+    /* navigation bar logo */
+    #navbar #logo{
+        height: 30px;
+        width: 150px;
+        margin-top: 20px;
+    }
+
+    /* theme switch and search button */
+    #navbar #theme , #search{
+        width: 15px;
+        height: 15px;
+        margin-top: 27px
+    }
+
+     /* menu button image styles */
+    #navbar #btn-menu img{
+        width: 15px;
+        height: 15px;
+    }
+
+    /* navigation buttons visibility */
+    #navbar button{
+        display: none;
+    }
+
+    /* menu button visibility */
+    #navbar #btn-menu{
+        display: block;
+    }
+
+    /* right side navigation bar style */
+    #nav-for-small-divice div{
+        padding-left:  15px;
+        padding-right: 180px;
+    }
+
+    /* right side navigation bar container */
+    #nav-for-small-divice {
+       top: 70px;
+       right: -320px;
+    }
+
+    /* more dropdown visibility */
+    #more-dropdown{
+        display: none;
+    }
+
+    #nav-for-small-divice .small-dropdown-itm{
+        font-size: 12px;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    #search-box{
+        padding-top: 75px;
+    }
+    
+
+}
+
+@media (min-width:768px){
+    /* navigation bar theme */
+    #navbar{
+        height: 80px;
+        background-color: var(--header-color);
+        box-shadow:0 8px 8px #08080814;
+    }
+
+    /* navigation bar logo */
+    #navbar #logo{
+        height: 35px;
+        width: 175px;
+        margin-top: 22px;
+    }
+
+    /* theme switch and search button */
+    #navbar #theme , #search{
+        width: 18px;
+        height: 18px;
+        margin-top: 31px
+    }
+
+    /* menu button image styles */
+    #navbar #btn-menu img{
+        width: 18px;
+        height: 18px;
+    }
+
+    /* navigation buttons visibility */
+    #navbar button{
+        display: none;
+    }
+
+    /* menu button visibility */
+    #navbar #btn-menu{
+        display: block;
+    }
+
+    /* right side navigation bar style */
+    #nav-for-small-divice div{
+        padding-left:  30px;
+        padding-right: 200px;
+    }
+
+    /* right side navigation bar container */
+    #nav-for-small-divice {
+       top:80px;
+       right: -320px;
+    }
+
+    /* more dropdown visibility */
+    #more-dropdown{
+        display: none;
+    }
+
+    #nav-for-small-divice .small-dropdown-itm{
+        font-size: 12px;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+    #search-box{
+        padding-top: 85px;
+    }
+
+
+}
+
+@media (min-width:992px){
+    /* navigation bar theme */
+    #navbar{
+        height: 80px;
+        background-color: transparent;
+        box-shadow:none;
+    }
+
+    /* navigation bar logo */
+    #navbar #logo{
+        height: 45px;
+        width: 225px;
+        margin-top: 17px;
+    }
+
+    /* theme switch and search button */
+    #navbar #theme , #search{
+        width: 18px;
+        height: 18px;
+        margin-top: 34px
+    }
+
+    /* menu button image styles */
+    #navbar #btn-menu img{
+        width: 18px;
+        height: 18px;
+    }
+
+    /* navigation buttons visibility */
+    #navbar button{
+        display: block;
+        margin-top: 31px
+    }
+
+    /* menu button visibility */
+    #navbar #btn-menu{
+        display: none;
+    }
+  
+    /* right side navigation bar container */
+    #nav-for-small-divice {
+        right: -320px;
+    }
+
+    /* more dropdown visibility */
+    #more-dropdown{
+        display: block;
+    }
+
+    #nav-for-small-divice .small-dropdown-itm{
+        font-size: 12px;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+
+
+}
+
+@media (min-width:1200px){
+    /* navigation bar theme */
+    #navbar{   
+        background-color: transparent;
+        height:80px;
+        box-shadow:none;
+    }
+
+    /* navigation bar logo */
+    #navbar #logo{
+        height: 45px;
+        width: 225px;
+        margin-top: 17px;
+    }
+
+    /* theme switch and search button */
+    #navbar #theme , #search{
+        width: 18px;
+        height: 18px;
+        margin-top: 34px
+    }
+
+    /* menu button image styles */
+    #navbar #btn-menu img{
+        width: 18px;
+        height: 18px;
+    }
+
+    /* navigation buttons visibility */
+    #navbar button{
+        display: block;
+        margin-top: 31px
+    }
+
+    /* menu button visibility */
+    #navbar #btn-menu{
+        display: none;
+    }
+
+    /* right side navigation bar container */
+    #nav-for-small-divice {
+        right: -320px;
+    }
+
+    /* more dropdown visibility */
+    #more-dropdown{
+        display: block;
+    }
+
+    #nav-for-small-divice .small-dropdown-itm{
+        font-size: 12px;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+    
+}

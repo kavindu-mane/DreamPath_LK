@@ -1,0 +1,166 @@
+/* solution by Hashini Sulakshana @group 7 */
+
+/* light theme */
+.theme-light{
+    --background-color:#f5f5f5;
+    --header-color:#ffffff;
+    --navigation-small:#ffffff;
+    --font-color:#000000;
+    --button-color:#089755;
+    /* --navigation-color:#050242; */
+    --hover-color:#38cc87;
+    --text-hover-color:#dbdbdb;
+    --shadow-color:#53515168;
+}
+
+/* dark theme */
+.theme-dark{
+    --background-color:#2C394B;
+    --header-color:#11283a;
+    --navigation-small:#334756;
+    --font-color:#ffffff;
+    /* --navigation-color:#050242; */
+    --button-color:#089755;
+    --hover-color:#38cc87;
+    --text-hover-color:#515f69;
+    --shadow-color:#27262678;
+}
+
+/* navigation style */
+#navbar{
+    background-color:var(--header-color);
+    box-shadow: 0 -2px 5px 2px var(--shadow-color);
+}
+
+/* button home color change */
+#navbar #btn-about , #small-btn-about{
+    background-color: #089755;
+}
+
+/* footer style */
+#footer iframe{
+    width: 100%;
+}
+
+/* main div styles */
+.main-divs{
+    width: 80%;
+    margin: 10px 10% 30px;
+    padding-top: 90px;
+}
+
+/* change about us div's top padding */
+#about-us{
+    padding-top: 30px;
+}
+
+/* main div fielkdset style */
+.main-divs fieldset{
+    margin: 0 20px;
+    border: 2px solid #089755;
+    padding: 20px;
+}
+
+/* main div legent style */
+.main-divs legend{
+    font-size: 20px;
+    color: var(--font-color);
+    font-family: 'Dosis', sans-serif;
+    padding: 0 10px;
+}
+
+/* main divs pharagraph */
+.main-divs p , .main-divs ul{
+    font-family:'Nunito', sans-serif;;
+    font-size: 15px;
+    color: var(--font-color);
+    margin: 0;
+    padding: 10px 8%;
+    text-align: justify;
+}
+
+.main-divs ul{
+    padding: 0 15%;
+}
+
+/* pharagraph span */
+.main-divs p span{
+    color: #089755;
+    font-size: 20px;
+}
+
+/* h2 styles */
+.main-divs h2{
+    font-family:'Nunito', sans-serif;;
+    font-size: 20px;
+    padding: 0 10%;
+    color: var(--font-color);
+}
+
+
+@media (max-width:600px){
+    #footer iframe{
+        height: 925px;
+    }
+
+    .main-divs legend{
+        font-size: 15px;
+    }
+
+    .main-divs p , .main-divs ul{
+        font-size: 12px;
+    }
+
+    .main-divs p span{
+        font-size: 15px;
+    }
+
+    .main-divs h2{
+        font-size: 15px;
+    }
+
+    .main-divs{
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .main-divs h2 , .main-divs p{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+
+@media (max-width:460px){ /*these values are checked values for devices*/
+    #footer iframe{
+        height: 935px;
+    }
+   
+}
+
+@media (max-width:308px){ /*these values are checked values for devices*/
+    #footer iframe{
+        height: 950px;
+    }
+}
+
+@media (min-width:600px){
+    #footer iframe{
+        height: 925px;
+    }
+
+}
+
+@media (min-width:786px){
+    #footer iframe{
+        height: 440px;
+    }
+
+}
+
+@media (min-width:992px){
+    #footer iframe{
+        height: 490px;
+    }
+
+}

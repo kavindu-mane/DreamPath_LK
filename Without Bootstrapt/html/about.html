@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Hashini Sulakshana @ group 7">
+    <meta name="revised" content="12/02/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/about-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>About - DreamPath.lk</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav id="navbar">
+
+        <!-- logo image -->
+        <img src="../Images/DreamPath-white.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+
+        <!-- search icon and theme change icon -->
+        <img src="../Images/search.svg" alt="theme" id="search">
+        <img src="../Images/sun.svg" alt="search" id="theme">
+
+        <!-- include default theme js file -->
+        <script src="../JavaScript/default-script.js"></script>
+
+        <!-- this script use for loading with saved theme selection -->
+        <script>
+            localStorage.getItem("theme") == 'theme-dark' ? themeChange('theme-light') : themeChange('theme-dark');
+        </script>
+
+        <!-- navigation bar buttons -->
+        <button id="btn-home" onclick="location.href='../index.html'">Home</button>
+        <button id="btn-services" onclick="location.href='../html/services.html'">Services</button>
+        <button id="btn-contacts" onclick="location.href='../html/contacts.html'">Contact</button>
+        <button id="btn-about" onclick="location.href='../html/about.html'">About</button>
+        <button id="btn-more">More <span style="font-size: 12px; margin-bottom:5px">&#11206;</span></button>
+
+        <!-- sign in and sign up button -->
+        <button id="sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+
+        <!-- navigation bar menu button for small displays -->
+        <button id="btn-menu"> <img src="../Images/menu.svg" alt="menu"> </button>
+
+    </nav>
+
+    <!-- navigation dropdown for small display divices -->
+    <div id="nav-for-small-divice">
+        <div id="small-btn-home" onclick="location.href='../index.html'">Home</div>
+        <div id="small-btn-services" onclick="location.href='../html/services.html'">Services</div>
+        <div id="small-btn-contacts" onclick="location.href='../html/contacts.html'">Contact</div>
+        <div id="small-btn-about" onclick="location.href='../html/about.html'">About</div>
+        <div id="small-btn-more">More <span style="font-size: 10px;">&#11206;</span></div>
+
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#vision'">Vision</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#privacy-policy'">Privacy Policy</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#term-of-use'">Term of use</div>
+        <div class="small-dropdown-itm" onclick="location.href='../html/about.html#legal'">Legal</div>
+        <div class="small-dropdown-itm">FAQ</div>
+
+        <button id="small-sign-in" class="sign-btns" onclick="location.href='../html/signin.html'">Sign in</button>
+        <button id="small-sign-up" class="sign-btns" onclick="location.href='../html/signup.html'">Sign up</button>
+    </div>
+
+    <!-- more dropdown -->
+    <div id="more-dropdown">
+
+        <div>Vision</div>
+        <div>Privacy Policy</div>
+        <div>Term of use</div>
+        <div>Legal</div>
+        <div>FAQ</div>
+
+        <!-- this script use for hide dropdown after the selection -->
+        <script>
+            let linkObj = {
+                "Vision": "vision",
+                "Privacy Policy": "privacy-policy",
+                "Term of use": "term-of-use",
+                "Legal": "legal",
+                "FAQ": "faq.html"
+            };
+            for (let clicked of document.querySelectorAll("#more-dropdown div")) {
+                clicked.onclick = function () {
+
+                    if (linkObj[clicked.textContent] !== "faq.html") {
+                        location.href = '../html/about.html#' + linkObj[clicked.textContent];
+                    } else {
+                        location.href = '../html/' + linkObj[clicked.textContent];
+                    }
+
+                    document.getElementById("btn-more").click();
+                }
+            }
+
+        </script>
+
+    </div>
+
+    <!-- search box -->
+    <div id="search-box">
+        <input type="text" name="search" id="search-key" placeholder="Search by skill , job title">
+        <button><i class="fa-solid fa-magnifying-glass" style="color:#38cc87;"></i></button>
+    </div>
+
+    <!-- content area start -->
+
+    <div id="about-us" class="main-divs">
+        <fieldset>
+            <legend>About us</legend>
+            <p>What is <span>DreamPath.lk</span> ?
+                <br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                DreamPath.lk is jobs portal in Sri Lanka that bridges job seekers and employers and deliver the best for
+                both parties, Sri Lankan own & operated online job site in Sri Lanka.We have listed the jobs under
+                various job categories (industry) and sub- categories, as well as we have categorized the jobs based on
+                job location (provinces), job type (full time, part time etc), and more.
+                DreamPath.lk makes the job hunting easy in Sri Lanka with us, by finding more jobs in Sri Lanka & very
+                easy to application system we have.More than 50 different categories. We also carefully review all jobs
+                that are being published, to make sure
+                the quality is up to our standards.
+                If you'd like to get in touch with us, go to Contact us.
+            </p>
+
+        </fieldset>
+
+    </div>
+
+    <div id="vision" class="main-divs">
+        <fieldset>
+            <legend>Vision</legend>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;We continuously strive to become the preferred source for
+                employment and human resource services. We are
+                dedicated to serving our customers and the community with the highest levels of service, knowledge,
+                professionalism, honesty and integrity.
+                We are devoted to remaining unsurpassed in customer satisfaction. We strive to maintain our reputation
+                as a:
+                <br>
+            <ul>
+                <li>Professional small business with principles and integrity.</li>
+                <li>Friendly organization that supports our communities.</li>
+                <li>Willing and trusted partner.</li>
+                <li>Generous organization, giving of time and resources.</li>
+            </ul>
+            </p>
+
+        </fieldset>
+
+    </div>
+
+    <div id="privacy-policy" class="main-divs">
+        <fieldset>
+            <legend>Privacy Policy</legend>
+
+            </p>
+            <h2>Acceptance of the privacy policy by users</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;You agree to be bound by the terms and conditions of the
+                DreamPath.lk Privacy policy which is set out herein
+                by accessing this website and following the registration process. Please read this privacy policy
+                carefully
+                before using this website.
+
+            </p>
+            <h2>Intellectual Property Rights</h2>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Your personal details, name, age, employment, occupation,
+                email address and any other information that is
+                not otherwise publicly available are accepted by us as your personal information and data. These details
+                will only be transferred by us for the express purposes stated on this Website. However this shall not
+                apply
+                where DreamPath.lk is required by Court Order under criminal or civil proceedings to provide such
+                information and data to a Court of Law for any reason.
+                We shall have the right to extract information and data which does not release private and personal
+                details
+                which provides generic and statistical analysis and shall have the right to provide such marketing and
+                promotional material to third parties without any further consent from you. This shall include type of
+                usage
+                of site, age group, financial category, ethnic origins and any other material which does not reveal your
+                specific details.
+                You are advised to read the privacy policies of other websites which are linked to our website and
+                DreamPath.lk shall not be bound or responsible for the terms and conditions applicable to the usage of
+                any
+                such website linked to DreamPath.lk.
+                DreamPath.lk has unique services offered to its members or users such as the "Learning Environment" and
+                "e-community" which will consist of articles, photos and pictures etc sent or shared by the members or
+                users. When such articles, photos and pictures etc are posted on our website by the members or users
+                DreamPath.lk assumes such material do not violate intellectual property rights of third parties.
+                DreamPath.lk will not accept liability for infringement of copyright or violation of any other
+                intellectual
+                property rights of third parties by the members or users of our website. DreamPath.lk reserves its right
+                to
+                remove any such material if they are found to be infringing copyright or other intellectual property
+                rights
+                of third parties without any notice.
+                DreamPath.lk provides a number of services for Companies and employers who intend to recruit employees.
+                They
+                have the option inter alia to advertise vacancies, request and manage resumes. The companies can also
+                post
+                their video profiles and obtain data to carry out surveys. You may check all these unique features which
+                are
+                not described here in full. The policy with regard to the infringement of intellectual property rights
+                mentioned above will also apply to companies and employers who post any material on our website for the
+                purpose of advertising and recruiting employees.
+
+            </p>
+            <h2>Collection of Personal Data</h2>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;DreamPath.lk collects personal details such as your name,
+                address, age, employment, occupation, experience,
+                nationality, email address, telephone number and any other details ordinarily associated with a resume.
+                That
+                personal information will be made available to Companies or employers to whom your resume will be sent
+                by
+                us. Please note that those companies or employers have their own privacy policies with regard to
+                personal
+                information received by them and you will be governed by those when your personal information are
+                transmitted by us. Therefore, it would be in your own interest that you should read and understand the
+                privacy policies of those companies or employers. DreamPath.lk will not be bound or responsible for such
+                privacy policies which are outside the control of DreamPath.lk.
+                In addition to the above DreamPath.lk will be collecting articles, photos and pictures sent by its users
+                or
+                members. Such material will be utilised for services such as Learning Environment and e-Community which
+                are
+                unique services offered by us. You are advised to check those features to understand the services
+                offered by
+                us. DreamPath.lk will also collect any material posted by the companies or employers for the purpose of
+                advertising and employee recruiting.
+
+            </p>
+            <h2>Control of your Personal Information</h2>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;By opening a DreamPath.lk account available on our website or
+                by sign-in for any services on our website you
+                will become a member of our website. The information you provide at the time of opening the account or
+                sign-in for the services on our website or information on your resume will be the personal information
+                that
+                will be within our control and usage in order to provide services mentioned on our website. You have the
+                option to edit the information provided by you to the DreamPath.lk account at any time and do any
+                changes,
+                deletions or unsubscribe your marketing preferences, products or services provided by us. However there
+                are
+                services that send periodic emails on products and services provided by us to inform you of the new
+                developments on our site which cannot be unsubscribed as same is an integral part of our website.
+                We are committed to protect the confidentiality of the information provided by you. You have the ability
+                to
+                make your posting on our website completely confidential. Your postings allow you to choose multiple
+                roles
+                and job categories. You may create up to five CVs and customize each for different types of jobs. You
+                have
+                also the option to define your privacy level by using confidentiality settings. Moreover you can manage,
+                view, save and organize resumes online. You can also manage who accesses your resume. You have the
+                option to
+                access jobs while on the move through SMS.
+
+            </p>
+            <h2>Changes to this Statement</h2>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;DreamPath.lk reserves it right to amend, alter or change this
+                Privacy policy based on the feedback of the
+                users. If any amendment, alteration or change is effected by us this Privacy policy will be updated by
+                DreamPath.lk and users are advised to periodically check these updates for their own benefit. However if
+                there are any substantial amendments, alterations or changes to be made by us, users will be informed of
+                same well in advance.</p>
+
+        </fieldset>
+
+    </div>
+
+    <div id="term-of-use" class="main-divs">
+        <fieldset>
+            <legend>Term of Use</legend>
+            <h2>Acceptance of the terms and conditions by users</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;You agree to be bound by the terms and conditions of
+                DreamPath.lk set out below as the terms and
+                conditions of your use of this website. You agree that by confirming your acceptance and logging your
+                details that you will access, order products or use the services on our website in accordance with those
+                terms and conditions. Please read this document carefully before using this website. </p>
+            <h2>Intellectual Property Rights</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;The contents of this website such as text, images, graphics,
+                trademarks, trade names and service marks
+                belong to DreamPath.lk and covered by Intellectual Property Laws. No part of this website may be
+                reproduced, adapted, modified or redistributed in any form during or after ceasing to be a member or a
+                user without prior written consent from DreamPath.lk. The contents of the website are regularly updated
+                and revised and the copyright owner remains the same. You are permitted to use material for your own
+                personal non commercial use and for that purpose only you may copy and print such material on this
+                website.
+                The "Learning Environment" and "e-community" are services that provide members the option to post
+                articles, photos or pictures on the website and sharing such material. The companies or employers are
+                permitted to advertise their vacancies using material such as text, images, photos or pictures as a part
+                of the services provided by DreamPath.lk. In such event DreamPath.lk will not take any liability or
+                responsibility for third party intellectual property violations committed by members, users, companies
+                or employers. DreamPath.lk reserves its right to remove such material without any notice and take
+                criminal and civil action against such party who posts material that infringes intellectual property
+                rights.
+                No obscene, offensive, defamatory or racially prejudiced material or material which do not relate to the
+                user and false material will be permitted to be posted on our website. DreamPath.lk will remove such
+                material without any notice and will take appropriate legal action against such party who posted the
+                material. In any event DreamPath.lk reserves its right not to publish any article on the website without
+                assigning any reason whatsoever. </p>
+            <h2>Exclusion of Liability/Disclaimer</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;We disclaim responsibility for any consequences arising from
+                your access to or use of this website or any
+                links. All contents which is included is entirely at the sole discretion of DreamPath.lk and may be
+                altered or deleted at any time. Any material which you add to this site by way of postings or otherwise
+                shall not be defamatory, in breach of copyright and shall either be cleared for use in this manner or
+                shall be your own original material. You agree that we shall have the right to use any such material in
+                our publicity, advertising or transmission for the purposes of our website. </p>
+            <h2>Indemnity</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;The member agrees to indemnify DreamPath.lk against any action,
+                claim, proceedings, demands, loss, damage
+                and/or injury and any costs or reasonable legal expenses incurred by DreamPath.lk as a result of any
+                breach or alleged breach of the terms of use. </p>
+            <h2>Use of data</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;The information we gather on our website will be used to
+                provide products or services offered by us. Such
+                information we gather will be transmitted to companies or employers who seek to fill employment
+                vacancies. The articles and other material posted on our site by the members will be used for services
+                referred to in the "Learning Environment" and "e-community". In addition those information will be used
+                by us to contact you, for statistics and for advertising purposes. </p>
+            <h2>Fees and Payments</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Job seeking members need not make any payment to use services
+                on our website. However other members will
+                be required to pay the Subscription fees or payments set out on our site in order to use such services
+                offered by us. The fees or payments will be payable on the date of sign-in for services on DreamPath.lk
+                or any other date stipulated by DreamPath.lk on invoices issued to members. The members may be required
+                to provide deposits in order to provide certain services and amount of such deposits will be determined
+                or altered at the sole discretion DreamPath.lk reserves its right to claim interest for any amount
+                payable to DreamPath.lk which is delayed by the members. If fees or payments due to DreamPath.lk as
+                aforesaid are not paid as stipulated therein such members will be removed from our database without
+                giving any notice. </p>
+            <h2>Confidentiality and the Disclosure of Information</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;The nature of services offered by is such that we need to
+                divulge personal information to companies or
+                employers who are seeking to fill their vacancies. In such event it is implied that you consent for
+                disclosure of information to such companies or employers. The other services such as "Learning
+                Environment" and "e-community" will be services that will have materials collected from members and
+                which may be transmitted to other members. It is not the policy of DreamPath.lk to divulge information
+                received or collected from members to third parties other than for the purposes of DreamPath.lk. </p>
+            <h2>Use of Cookies</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;DreamPath.lk recommends its users to enable the use of cookies
+                on their browser to receive the best
+                experience of our site. Cookies deliver the convenience of recalling sites you visited before and saves
+                your time that takes to log on and to browse faster. Most browsers have this option enabled and option
+                to disable or customize the use of cookies. </p>
+            <h2>Termination of Service & Liability</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Notwithstanding any other provisions set out herein this
+                Agreement may be terminated by either party by
+                giving 30 days notice to the other party a) if the other party commits a material breach of the terms
+                and conditions; b) if the member has provided false and incomplete information to DreamPath.lk; c) If
+                the member has posted obscene, offensive, defamatory or racially prejudiced material or material that
+                infringe intellectual property rights of third parties to DreamPath.lk; d) If it is not in the best
+                interest of members to provide services by DreamPath.lk; e) If the member is declared to be a bankrupt
+                person/body or is in the process of being wound up by a Court of Law or being wound up voluntarily. The
+                termination under this clause shall not prejudice the rights and remedies of the parties that accrued
+                prior to the date of termination. </p>
+            <h2>Modifications</h2>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;DreamPath.lk reserves its right to amend the terms and
+                conditions of this agreement without any notice to
+                the members. The members will be prompted to these amendments and have the option to accept or decline
+                the amended terms and conditions. If the member declines to accept the amendments this Agreement will
+                terminate immediately. In such event liabilities that accrued to the member prior to the termination of
+                the Agreement will continue. If the member continues to use the site without accepting the amended terms
+                and conditions of this Agreement he is considered to have accepted such terms and conditions. </p>
+
+        </fieldset>
+
+    </div>
+
+    <div id="legal" class="main-divs">
+        <fieldset>
+            <legend>Legal Status</legend>
+            <p>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;For legal reasons. We will share personal information outside
+                of DreamPath.lk if we have a good-faith
+                belief that access, use, preservation, or disclosure of the information is reasonably necessary to:</p>
+            <br>
+            <ul>
+                <li>Meet applicable law, legal process, or government request</li>
+                <li>Enforce our Terms of Service, including investigating potential violations</li>
+                <li>Detect, prevent, or otherwise address fraud, security, or technical issues</li>
+                <li>Protect against harm to the rights, property, or safety of DreamPath.lk, our users, or the public as
+                    required or permitted by law</li>
+            </ul>
+            <br>
+            <p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;We may share non-personally identifiable information publicly
+                and with our partners, such as potential
+                Employers. In rare cases, we may also allow them to collect information from your browser or device for
+                advertising and measurement purposes using their own cookies or similar technologies.
+
+                If DreamPath.lk is involved in a merger, acquisition, or sale of assets, we'll continue to ensure the
+                confidentiality of your personal information and give affected users notice before personal information
+                is transferred or becomes subject to a different privacy policy.</p>
+        </fieldset>
+
+    </div>
+
+    <!-- content area end -->
+
+    <!-- footer class div -->
+    <div id="footer">
+        <iframe src="../html/footer.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- add chat icon to web page -->
+    <div id="chat-btn" onclick="location.href='contacts.html'">
+        <img src="../Images/chat.svg" alt="chat">
+    </div>
+
+    <!-- create back to top div -->
+    <div id="back-to-top">&Lt;</div>
+
+    <!-- scroll function script -->
+    <script>
+        document.querySelector("#back-to-top").addEventListener('click', function () {
+
+            document.body.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <!-- add dropdown JavaScript -->
+    <script src="../JavaScript/dropdowns.js"></script>
+
+</body>
+</html>

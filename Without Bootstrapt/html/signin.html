@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html lang="en" class="theme-light">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Thakshila Dulanjani @ group 7">
+    <meta name="revised" content="16/02/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- link stylsheet and fonts -->
+    <link rel="stylesheet" href="../css/sign-in-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <!-- add website icon -->
+    <link rel="icon" href="../Images/DreamPath-icon.svg">
+    <title>Sign-in - DreamPath.lk</title>
+
+</head>
+
+<body>
+
+    <div id="bkg">
+        <img src="../Images/background-img.png" alt="background-img" width="100%" height="100%" style="margin: 0; padding: 0;">
+    </div>
+
+    <div id="sign-in-container">
+        <div id="heading"> Sign in</div>
+
+        <form action="../index.html"  onsubmit="return submitFunc()" id="worker-form"> <!--method="post"-->
+            <div class="field-div">
+                <label for="email">Email:&ensp;</label><br>
+                <input type="email" name="email" id="email" autocomplete="email">
+                <img src="../Images/check.svg" alt="correct" class="correctID" >
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <p class="error-text">Error</p>
+            </div>
+
+            <div class="field-div">
+                <label for="password">Password:&ensp;</label><br>
+                <input type="password" name="password" id="password" maxlength="15" autocomplete="current-password">
+                <img src="../Images/check.svg" alt="correct" class="correctID">
+                <img src="../Images/exclamation.svg" alt="error" class="errorID">
+                <img src="../Images/eye-slash-solid.svg" alt="correct" class="passwordHide">
+                <img src="../Images/eye-solid.svg" alt="error" class="passwordView">
+                <p class="error-text">Error</p>
+            </div>
+           
+            <input type="submit" value="login" id="submit-btn">
+
+            <a href="#" id="forget-password">Forget password</a>
+            <p id="need-account">Need an account&ensp;<a href="../html/signup.html" id="sign_up">sign up</a></p>
+        </form>
+    </div>
+
+    <!-- theme image -->
+    <img src="../Images/moon.svg" alt="theme" id="theme">
+    <img src="../Images/DreamPath.svg" alt="logo" id="logo" onclick="location.href='../index.html'">
+    <nav id="copyright">Privacy policy &ensp; | &ensp; Term of use &ensp; | &ensp; FAQ &ensp; <br> &copy; DreamPath.lk -
+        2022 &ensp; | &ensp; Solution by TEAM-7</nav>
+
+
+    <!-- this script use for loading with saved theme selection and form validate -->
+    <script src="../JavaScript/signin-script.js">
+
+    </script>
+
+</body>
+
+</html>

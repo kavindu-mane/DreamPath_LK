@@ -1,0 +1,218 @@
+/* solution by Sewmini Rathnayaka @group 7 */
+
+/* light theme */
+.theme-light{
+    --background-color:#f5f5f5;
+    --header-color:#ffffff;
+    --navigation-small:#ffffff;
+    --font-color:#000000;
+    --button-color:#089755;
+    /* --navigation-color:#050242; */
+    --hover-color:#38cc87;
+    --text-hover-color:#dbdbdb;
+    --box-background:#fff;
+    --shadow-color:#53515168;
+}
+
+/* dark theme */
+.theme-dark{
+    --background-color:#2C394B;
+    --header-color:#11283a;
+    --navigation-small:#334756;
+    --font-color:#ffffff;
+    /* --navigation-color:#050242; */
+    --button-color:#089755;
+    --hover-color:#38cc87;
+    --text-hover-color:#515f69;
+    --box-background:#152433;
+    --shadow-color:#27262678;
+}
+
+/* navigation style */
+#navbar{
+    background-color:var(--header-color);
+    box-shadow: 0 -2px 5px 2px var(--shadow-color);
+}
+
+/* button home color change */
+#navbar #btn-services , #small-btn-services{
+    background-color: #089755;
+}
+
+/* footer style */
+#footer iframe{
+    width: 100%;
+}
+
+#dreampath-for{
+    padding-top: 20px;
+}
+
+#for-worker , #for-employer{
+    padding-bottom: 20px;
+}
+
+#for-worker fieldset , #for-employer fieldset{
+    display: grid;
+}
+
+.box-bkg{
+    padding: 10px 5%;
+    border-radius: 10px;
+    margin:10px 5%;
+    width: 80%;
+    background-color: var(--box-background);
+    box-shadow: -2px 3px 5px var(--shadow-color);
+}
+
+.font-color{
+    color: var(--font-color);
+    font-family: 'nunito' , sans-serif;
+}
+
+.icons {
+    color:#4772cf; 
+    display:flex; 
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#container{
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+fieldset{
+    border: 2px solid #38cc87;
+}
+
+legend{
+    color: var(--font-color);
+    padding: 0 10px;
+    font-family:'Nunito', sans-serif;
+}
+
+.font-default{
+    color: var(--font-color);
+    font-family:'Nunito', sans-serif;
+    text-align: justify;
+}
+
+.spans{
+      color: #38cc87;  
+      font-family:'kanit', sans-serif;
+      text-align: center;
+      margin: 5px 0 0;
+}
+
+
+/* media quaries */
+@media (max-width:600px){
+    #footer iframe{
+        height: 925px;
+    }
+
+    .font-default , .spans{
+        width: 90%;
+        padding: 0 5%;
+        font-size: 0.7rem;
+    }
+
+    #container fieldset , #dreampath-for{
+        margin: 0 5%;
+    }
+
+    .spans , legend{
+        font-size: 0.8rem;
+    }
+
+    #for-worker fieldset , #for-employer fieldset{
+        grid-template-columns: auto;
+    }
+
+    .font-color{
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width:460px){ /*these values are checked values for devices*/
+    #footer iframe{
+        height: 935px;
+    }
+   
+}
+
+@media (max-width:308px){ /*these values are checked values for devices*/
+    #footer iframe{
+        height: 950px;
+    }
+}
+
+@media (min-width:600px){
+    #footer iframe{
+        height: 925px;
+    }
+
+    .font-default , .spans{
+        width: 80%;
+        padding: 0 10%;
+        font-size: 0.9rem;
+    }
+
+    #container fieldset , #dreampath-for{
+        margin: 0 10%;
+    }
+
+    .spans , legend{
+        font-size: 1rem;
+    }
+
+    #for-worker fieldset , #for-employer fieldset{
+        grid-template-columns: auto;
+    }
+
+    .font-color{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (min-width:786px){
+    #footer iframe{
+        height: 440px;
+    }
+
+    #for-worker fieldset , #for-employer fieldset{
+        grid-template-columns: auto auto;
+    }
+
+    .font-color{
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width:992px){
+    #footer iframe{
+        height: 490px;
+    }
+
+    .font-default , .spans{
+        width: 80%;
+        padding: 0 10%;
+        font-size: 1.1rem;
+    }
+
+    #container fieldset , #dreampath-for{
+        margin: 0 15%;
+    }
+
+    .spans , legend{
+        font-size: 1.2rem;
+    }
+
+    .font-color{
+        font-size: 1rem;
+    }
+
+}

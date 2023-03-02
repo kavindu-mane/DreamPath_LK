@@ -1,0 +1,219 @@
+/* solution by Lakruwan Jayathissa @group 7 */
+
+.theme-light {
+  --color-primary: #f8f8f8;
+  --color-secondary: #d1d1d1;
+  --font-color: #000;
+  --heading-color: #bc79ff;
+  --shadow-color: #53515168;
+  --theme-btn-color: #11283a;
+}
+
+.theme-dark {
+  --color-primary: #2c394b;
+  --color-secondary: #11283a;
+  --font-color: #fff;
+  --heading-color: #0b5269;
+  --shadow-color: #27262678;
+  --theme-btn-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color-green: #10bd6c;
+  --color-gray: #808080;
+  font-family: 'Kanit' , sans-serif;
+}
+
+.color-green{
+  color: #10bd6c;
+}
+
+.color-red{
+  color: #f54a4a;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--color-secondary);
+  background-image: url(../Images/background.png);
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.logo p span {
+  color: #f54a4a;
+  font-weight: 600;
+
+}
+
+#signinform {
+  background-color: var(--color-primary);
+  width: 90%;
+  padding: 0;
+  border-radius: 0.8rem;
+}
+
+#signinform h2 {
+  margin-bottom: 1rem;
+  background-color: var(--heading-color);
+  padding: 1rem 0;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  color: white;
+  font-family: 'IBM Plex Sans' , sans-serif;
+}
+
+.field-div {
+  margin: 0 10%;
+}
+
+.field-div label{
+  color: var(--font-color);
+  font-size: 0.8rem;
+}
+
+.field-div input{
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-gray);
+  color: var(--font-color);
+  font-size: 0.8rem;
+  height: 35px;
+}
+
+.form-control:focus{
+  background-color: var(--color-primary);
+  box-shadow: none;
+  border: 1px solid #4d65f1;
+  color: var(--font-color);
+}
+
+input:nth-child(2){
+  color: var(--font-color);
+  background-color: var(--color-primary);
+}
+
+.theme-dark input::-ms-reveal, .theme-dark input::-ms-clear {
+  filter: invert(100%);
+}
+
+.field-div .error-text {
+  font-size: 0.8rem;
+  color: #f54a4a;
+  visibility: hidden;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.field-div .input-icon{
+  visibility: hidden;
+}
+
+.error .error-text , .error .input-icon , .success .input-icon{
+  visibility: visible;
+
+}
+
+.error .form-control{
+  border: 1px solid #f54a4a;
+}
+
+.success .form-control{
+  border: 1px solid var(--color-green);
+}
+
+input[type="submit"] {
+  background-color: var(--heading-color);
+  padding: 0.3rem 1.5rem;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: 'Nunito' , sans-serif;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  margin-left: 10%;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -o-transform: scale(0.8);
+}
+#need-account,#forget-password {
+  font-size: 0.8rem;
+  color: var(--font-color);
+  margin-left: 10%;
+  text-decoration: none;
+}
+
+#need-account{
+  padding-bottom: 1.5rem;
+}
+
+#need-account a {
+  color: var(--color-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#forget-password:hover {
+  color: #38cc87;
+  cursor: pointer;
+}
+
+#copyright {
+  color: var(--font-color);
+  font-size: 0.7rem;
+}
+
+#theme {
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+  z-index: 999;
+  background-color: var(--theme-btn-color);
+  cursor: pointer;
+}
+
+#theme i {
+  transform: scale(0.7);
+  -o-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  color: var(--color-secondary);
+}
+
+@media (min-width: 576px) {
+  #signinform {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  #signinform {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  #signinform {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #signinform {
+    width: 30%;
+  }
+}

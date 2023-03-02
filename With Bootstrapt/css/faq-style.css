@@ -1,0 +1,43 @@
+/* solution by Dinuk Samarakoon @group 7 */
+
+.theme-light {
+  --color-primary: #fff;
+  --color-secondary: #fff;
+  --font-color: #000;
+  --heading-color: #bc79ff;
+  --shadow-color: #53515168;
+  --qna-div-color: white;
+}
+
+.theme-dark {
+  --color-primary: #11283a;
+  --color-secondary: #2c394b;
+  --font-color: #fff;
+  --heading-color: #0b5269;
+  --shadow-color: #27262678;
+  --qna-div-color: #152433;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color-green: #10bd6c;
+  --color-gray: #808080;
+}
+body {
+  background-color: var(--color-secondary);
+}
+.green {
+  color: #10bd6c;
+}
+.feedback-div {
+  background-color: var(--qna-div-color);
+  color: var(--font-color);
+  padding: 1.5rem 0;
+  border-radius: 0.8rem;
+}
+.feedback-div p {
+  margin: 0;
+  padding: 0 5%;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- set default language and theme -->
+<html class="theme-dark" lang="en">
+<!-- set deafult encoding stytem as unicode -->
+<meta charset="UTF-8">
+
+<head>
+
+    <!-- meta tags -->
+    <meta name="author" content="Kavindu Manahara @ group 7">
+    <meta name="revised" content="21/01/2022">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <meta name="keywords" content="jobs , job portal , job portal lk , job website , vacancies ">
+
+    <!-- add stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/footer-style.css">
+    <!-- add google nonito font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+
+    <!--theme set-->
+    <script>
+            setInterval(function(){
+
+                if(localStorage.getItem("theme") === "theme-dark"){
+                        document.documentElement.className = 'theme-dark';
+                }else{
+                        document.documentElement.className = 'theme-light';
+                }
+
+            },10)
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- footer class div -->
+    <div class="footer">
+        <!-- shortcut div -->
+        <div class="shortcut">
+            <p class="heading">Shortcuts</p>
+            <div onclick="parent.location.href='../index.html'">
+                    <img src="../images/external-link.svg" alt="external-link"> Home</div>
+
+            <div onclick="parent.location.href='services.html'">
+                    <img src="../images/external-link.svg" alt="external-link"> Services</div>
+
+            <div onclick="parent.location.href='contacts.html'">
+                    <img src="../images/external-link.svg" alt="external-link"> Contact us</div>
+
+            <div onclick="parent.location.href='about.html'">
+                    <img src="../images/external-link.svg" alt="external-link"> About us</div>
+        </div>
+
+        <!-- contacts div -->
+        <div class="contact">
+            <p class="heading">Contact info</p>
+            <div><img src="../images/call.svg" alt="external-link"> +94 114 55 1823</div>
+            <div><img src="../images/email.svg" alt="external-link"> info@dreampathlk.com</div>
+            <div><img src="../images/location.svg" alt="external-link"> No 40/1,<br>
+                &emsp; Galle Road, <br>
+                &emsp; Wellawatte, <br>
+                &emsp; Colombo 06.</div>
+
+        </div>
+
+        
+        <div class="find-us">
+            <p class="heading">Find us on</p>
+            <!-- we don't add social network account therefore we link our home page -->
+            <div onclick="parent.location.href='main.html'">
+                    <img src="../images/Facebook-logo.svg" alt="external-link">&ensp;Facebook</div>
+
+            <div onclick="parent.location.href='main.html'">
+                    <img src="../images/Instagram-logo.svg" alt="external-link">&ensp;Instagram</div>
+
+            <div onclick="parent.location.href='main.html'">
+                    <img src="../images/twitter-logo.svg" alt="external-link">&ensp;Twitter</div>
+            <div onclick="parent.location.href='main.html'">
+                    <img src="../images/linkedin-logo.svg" alt="external-link">&ensp;Linkedin</div>
+
+        </div>
+
+        <div class="terms">
+            <p class="heading">Terms & condition</p>
+            <div style="margin-bottom: 10px;">This Website uses cookies to make the website work,
+                for optimization of page content.By using our Website,
+                you agree to the use of cookies for these purposes.</div>
+        
+                <div onclick="parent.location.href='../html/about.html#vision'"><img src="../images/external-link.svg" alt="external-link"> Vision</div>
+                <div onclick="parent.location.href='../html/about.html#privacy-policy'"><img src="../images/external-link.svg" alt="external-link"> Privacy Policy</div>
+                <div onclick="parent.location.href='../html/about.html#term-of-use'"><img src="../images/external-link.svg" alt="external-link"> Term of use</div>
+                <div onclick="parent.location.href='../html/about.html#legal'"><img src="../images/external-link.svg" alt="external-link"> Legal</div>
+                <div onclick="parent.location.href='../html/faq.html'"><img src="../images/external-link.svg" alt="external-link"> FAQ</div>
+        </div>
+
+        <div class="location">
+            <p class="heading">Find us on google map</p>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36733.46911274546!2d79.88955924657742!3d6.884018213207136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1644002340437!5m2!1sen!2slk"            
+             style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <!-- copyrights -->
+    <nav class="copyright"><span>&copy;</span> DreamPath.lk - 2022 &ensp; | &ensp; Solution by TEAM-7</nav>
+
+</body>
+
+</html>
